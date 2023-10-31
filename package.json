@@ -1,7 +1,7 @@
 {
-	"name": "useful-snippets",
+	"name": "useful-group-snippets",
 	"publisher": "jeffcalaway",
-	"displayName": "Useful Snippets",
+	"displayName": "Useful Group Snippets",
 	"description": "Snippets that are useful for Useful Group",
 	"repository": {
 		"type": "git",
