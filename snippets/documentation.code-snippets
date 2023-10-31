@@ -1,0 +1,107 @@
+{
+    // Directory List
+    "Doc: Directory": {
+        "prefix": "d-d",
+        "scope": "php,javascript,css,scss",
+        "body": [
+            "//≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡",
+            "//",
+            "//    DIRECTORY",
+            "//",
+            "//    ✅${1:SECTION_NAME}",
+            "//",
+            "//≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡"
+        ]
+    },
+    "Doc: Directory (Deprecated)": {
+        "prefix": "dir",
+        "scope": "php,javascript,css,scss",
+        "body": [
+            "//≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡",
+            "//",
+            "//    DIRECTORY",
+            "//",
+            "//    ✅${1:SECTION_NAME}",
+            "//",
+            "//≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡"
+        ]
+    },
+    // Directory List Item
+    "Doc: List Item": {
+        "prefix": "d-di",
+        "scope": "php,javascript,css,scss",
+        "body": "//    ✅${1:SECTION_NAME}"
+    },
+    "Doc: List Item (Deprecated)": {
+        "prefix": "isec",
+        "scope": "php,javascript,css,scss",
+        "body": "//    ✅${1:SECTION_NAME}"
+    },
+    // Directory Section
+    "Doc: Section": {
+        "prefix": "d-s",
+        "scope": "php,javascript,css,scss",
+        "body": [
+            "//≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡",
+            "// ✅ ${1:SECTION_NAME}",
+            "//≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡"
+        ]
+    },
+    "Doc: Section (Deprecated)": {
+        "prefix": "sec",
+        "scope": "php,javascript,css,scss",
+        "body": [
+            "//≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡",
+            "// ✅ ${1:SECTION_NAME}",
+            "//≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡"
+        ]
+    },
+    // DocBlock
+    "Doc: Block": {
+        "prefix": "d-ds",
+        "scope": "php,javascript,css,scss",
+        "body": [
+            "//≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡",
+            "// ✅ ${1:SECTION_NAME}",
+            "//≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡",
+            "/**",
+            " * ${2:SUMMARY}",
+            " * ",
+            " * @return ${3:RETURN_TYPE}",
+            " */$0"
+        ]
+    },
+    "Doc: Block (Deprecated)": {
+        "prefix": "doc",
+        "scope": "php,javascript,css,scss",
+        "body": [
+            "//≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡",
+            "// ✅ ${1:SECTION_NAME}",
+            "//≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡",
+            "/**",
+            " * ${2:SUMMARY}",
+            " * ",
+            " * @return ${3:RETURN_TYPE}",
+            " */$0"
+        ]
+    },
+    // Direction Subsection
+    "Doc: Subsection": {
+        "prefix": "d-ss",
+        "scope": "php,javascript,css,scss",
+        "body": [
+            "//==================================================",
+            "// ${1:SECTION_NAME}",
+            "//=================================================="
+        ]
+    },
+    "Doc: Subsection (Deprecated)": {
+        "prefix": "subsec",
+        "scope": "php,javascript,css,scss",
+        "body": [
+            "//==================================================",
+            "// ${1:SECTION_NAME}",
+            "//=================================================="
+        ]
+    },
+}

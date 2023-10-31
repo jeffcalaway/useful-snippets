@@ -1,0 +1,205 @@
+{
+    // Get Field
+    "ACF: Field (HTML)": {
+        "prefix": "a-gf",
+        "scope": "html",
+        "body": "<?php get_field( '$1' ); ?>$0"
+    },
+    "ACF: Field (PHP)": {
+        "prefix": "a-gf",
+        "scope": "php",
+        "body": "get_field( '$1' )$0"
+    },
+    "ACF: Field (HTML) (Deprecated)": {
+        "prefix": "gf",
+        "scope": "html",
+        "body": "<?php get_field( '$1' ); ?>$0"
+    },
+    "ACF: Field (PHP) (Deprecated)": {
+        "prefix": "gf",
+        "scope": "php",
+        "body": "get_field( '$1' )$0"
+    },
+    // Get Sub Field
+    "ACF: Sub Field (HTML)": {
+        "prefix": "a-gsf",
+        "scope": "html",
+        "body": "<?php get_sub_field( '$1' ); ?>$0"
+    },
+    "ACF: Sub Field (PHP)": {
+        "prefix": "a-gsf",
+        "scope": "php",
+        "body": "get_sub_field( '$1' )$0"
+    },
+    "ACF: Sub Field (HTML) (Deprecated)": {
+        "prefix": "gsf",
+        "scope": "html",
+        "body": "<?php get_sub_field( '$1' ); ?>$0"
+    },
+    "ACF: Sub Field (PHP) (Deprecated)": {
+        "prefix": "gsf",
+        "scope": "php",
+        "body": "get_sub_field( '$1' )$0"
+    },
+    // Get Field Option
+    "ACF: Option Field (HTML)": {
+        "prefix": "a-gfo",
+        "scope": "html",
+        "body": "<?php get_field( '$1', '${2:option}' ); ?>$0"
+    },
+    "ACF: Option Field (PHP)": {
+        "prefix": "a-gfo",
+        "scope": "php",
+        "body": "get_field( '$1', '${2:option}' )$0"
+    },
+    "ACF: Option Field (HTML) (Deprecated)": {
+        "prefix": "gfo",
+        "scope": "html",
+        "body": "<?php get_field( '$1', '${2:option}' ); ?>$0"
+    },
+    "ACF: Option Field (PHP) (Deprecated)": {
+        "prefix": "gfo",
+        "scope": "php",
+        "body": "get_field( '$1', '${2:option}' )$0"
+    },
+    // Get Taxonomy Field
+    "ACF: Taxonomy Field (HTML)": {
+        "prefix": "a-gft",
+        "scope": "html",
+        "body": "<?php get_field( '$1', '${2:SLUG}_' . ${3:ID} ); ?>$0"
+    },
+    "ACF: Taxonomy Field (PHP)": {
+        "prefix": "a-gft",
+        "scope": "php",
+        "body": "get_field( '$1', '${2:SLUG}_' . ${3:ID} )$0"
+    },
+    "ACF: Taxonomy Field (HTML) (Deprecated)": {
+        "prefix": "gft",
+        "scope": "html",
+        "body": "<?php get_field( '$1', '${2:SLUG}_' . ${3:ID} ); ?>$0"
+    },
+    "ACF: Taxonomy Field (PHP) (Deprecated)": {
+        "prefix": "gft",
+        "scope": "php",
+        "body": "get_field( '$1', '${2:SLUG}_' . ${3:ID} )$0"
+    },
+    // Repeater
+    "ACF: Repeater (HTML)": {
+        "prefix": "a-rep",
+        "scope": "html",
+        "body": [
+            "<?php if( have_rows( '${1:REPEATER_NAME}' ) ): ?>",
+            "\t<?php while ( have_rows( '${1:REPEATER_NAME}' ) ) : the_row(); ?>",
+            "\t\t$2",
+            "\t<?php endwhile; ?>",
+            "<?php endif; ?>$0"
+        ]
+    },
+    "ACF: Repeater (PHP)": {
+        "prefix": "a-rep",
+        "scope": "php",
+        "body": [
+            "if( have_rows( '${1:REPEATER_NAME}' ) ) {",
+            "\twhile ( have_rows( '${1:REPEATER_NAME}' ) ) : the_row(); {",
+            "\t\t$2",
+            "\t}",
+            "}$0"
+        ]
+    },
+    "ACF: Repeater (HTML) (Deprecated)": {
+        "prefix": "repeater",
+        "scope": "html",
+        "body": [
+            "<?php if( have_rows( '${1:REPEATER_NAME}' ) ): ?>",
+            "\t<?php while ( have_rows( '${1:REPEATER_NAME}' ) ) : the_row(); ?>",
+            "\t\t$2",
+            "\t<?php endwhile; ?>",
+            "<?php endif; ?>$0"
+        ]
+    },
+    "ACF: Repeater (PHP) (Deprecated)": {
+        "prefix": "repeater",
+        "scope": "php",
+        "body": [
+            "if( have_rows( '${1:REPEATER_NAME}' ) ) {",
+            "\twhile ( have_rows( '${1:REPEATER_NAME}' ) ) : the_row(); {",
+            "\t\t$2",
+            "\t}",
+            "}$0"
+        ]
+    },
+    // Flex
+    "ACF: Flex (HTML)": {
+        "prefix": "a-flex",
+        "scope": "html",
+        "body": [
+            "<?php if( have_rows( '${1:FLEX_NAME}' ) ): ?>",
+            "\t<?php while ( have_rows( '${1:FLEX_NAME}' ) ) : the_row(); ?>",
+            "\t\t$2",
+            "\t<?php endwhile; ?>",
+            "<?php endif; ?>$0"
+        ]
+    },
+    "ACF: Flex (PHP)": {
+        "prefix": "a-flex",
+        "scope": "php",
+        "body": [
+            "if( have_rows( '${1:FLEX_NAME}' ) ) {",
+            "\twhile ( have_rows( '${1:FLEX_NAME}' ) ) : the_row(); {",
+            "\t\t$2",
+            "\t}",
+            "}$0"
+        ]
+    },
+    "ACF: Flex (HTML) (Deprecated)": {
+        "prefix": "flex",
+        "scope": "html",
+        "body": [
+            "<?php if( have_rows( '${1:FLEX_NAME}' ) ): ?>",
+            "\t<?php while ( have_rows( '${1:FLEX_NAME}' ) ) : the_row(); ?>",
+            "\t\t$2",
+            "\t<?php endwhile; ?>",
+            "<?php endif; ?>$0"
+        ]
+    },
+    "ACF: Flex (PHP) (Deprecated)": {
+        "prefix": "flex",
+        "scope": "php",
+        "body": [
+            "if( have_rows( '${1:FLEX_NAME}' ) ) {",
+            "\twhile ( have_rows( '${1:FLEX_NAME}' ) ) : the_row(); {",
+            "\t\t$2",
+            "\t}",
+            "}$0"
+        ]
+    },
+    // Add Options Page
+    "ACF: Options Page": {
+        "prefix": "a-op",
+        "scope": "php",
+        "body": [
+            "if ( function_exists('acf_add_options_page') ) {",
+            "\tacf_add_options_page([",
+            "\t\t'menu_title' => '${1:PAGE_TITLE}',",
+            "\t\t'menu_slug'  => '${2:PAGE_SLUG}',",
+            "\t\t'capability' => 'edit_posts',",
+            "\t\t'redirect'   => true,",
+            "\t\t'icon_url'   => 'dashicons-${3|admin-appearance,admin-collapse,admin-comments,admin-generic,admin-home,admin-links,admin-media,admin-network,admin-page,admin-plugins,admin-post,admin-settings,admin-site,admin-tools,admin-users,align-center,align-left,align-none,align-right,analytics,arrow-down,arrow-down-alt,arrow-down-alt2,arrow-left,arrow-left-alt,arrow-left-alt2,arrow-right,arrow-right-alt,arrow-right-alt2,arrow-up,arrow-up-alt,arrow-up-alt2,art,awards,backup,book,book-alt,businessman,calendar,camera,cart,category,chart-area,chart-bar,chart-line,chart-pie,cloud,dashboard,dismiss,download,edit,editor-aligncenter,editor-alignleft,editor-alignright,editor-bold,editor-customchar,editor-distractionfree,editor-help,editor-indent,editor-insertmore,editor-italic,editor-justify,editor-kitchensink,editor-ol,editor-outdent,editor-paste-text,editor-paste-word,editor-quote,editor-removeformatting,editor-rtl,editor-spellcheck,editor-strikethrough,editor-textcolor,editor-ul,editor-underline,editor-unlink,editor-video,exerpt-view,facebook,facebook-alt,feedback,flag,format-aside,format-audio,format-chat,format-gallery,format-image,format-quote,format-status,format-video,forms,googleplus,groups,hammer,id,id-alt,image-crop,image-flip-horizontal,image-flip-vertical,image-rotate-left,image-rotate-right,images-alt,images-alt2,info,leftright,lightbulb,list-view,location,location-alt,lock,marker,menu,migrate,minus,networking,no,no-alt,performance,plus,portfolio,post-status,pressthis,products,redo,rss,screenoptions,search,share,share-alt,share-alt2,shield,shield-alt,slides,smiley,sort,star-empty,star-filled,star-half,tag,translation,trash,twitter,undo,update,upload,vault,video-alt,video-alt2,video-alt3,visibility,welcome-add-page,welcome-comments,welcome-learn-more,welcome-view-site,welcome-widgets-menus,welcome-write-blog,wordpress,wordpress-alt,yes|}',",
+            "\t\t'post_id'    => '${4:ID}'",
+            "\t]);",
+            "}$0"
+        ]
+    },
+    "ACF: Sub Options Page": {
+        "prefix": "a-sop",
+        "scope": "php",
+        "body": [
+            "if ( function_exists('acf_add_options_sub_page') ) {",
+            "\tacf_add_options_sub_page([",
+            "\t\t'page_title' => '${1:PAGE_TITLE}'",
+            "\t\t'parent'     => 'theme-general-settings'",
+            "\t]);",
+            "}$0"
+        ]
+    }
+}

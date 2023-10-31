@@ -1,0 +1,476 @@
+{
+    // Debug Log
+    "WP: Debug Log (HTML)": {
+        "prefix": "_",
+        "scope": "html",
+        "body": "<?php _log( $1 ); ?>$0"
+    },
+    "WP: Debug Log (PHP)": {
+        "prefix": "_",
+        "scope": "php",
+        "body": "_log( $1 );$0"
+    },
+    // Page Setup
+    "WP: Page Setup": {
+        "prefix": "wp-set",
+        "scope": "html",
+        "body": [
+            "<?php",
+            "/**",
+            " *${1| , Template Name: |}",
+            " *",
+            " * @package ${2:UsefulGroup}${3| ,/Template,/Single,/Archive|}",
+            " */",
+            "",
+            "get_header(); ?>",
+            "",
+            "\t$4",
+            "",
+            "<?php get_footer(); ?>$0"
+        ]
+    },
+    // Header
+    "WP: Header (HTML)": {
+        "prefix": "wp-h",
+        "scope": "html",
+        "body": "<?php get_header(); ?>$0"
+    },
+    "WP: Header (PHP)": {
+        "prefix": "wp-h",
+        "scope": "php",
+        "body": "get_header();$0"
+    },
+    // Footer
+    "WP: Footer (HTML)": {
+        "prefix": "wp-f",
+        "scope": "html",
+        "body": "<?php get_footer(); ?>$0"
+    },
+    "WP: Footer (PHP)": {
+        "prefix": "wp-f",
+        "scope": "php",
+        "body": "get_footer();$0"
+    },
+    // WP Query
+    "WP: Query (HTML)": {
+        "prefix": "wp-q",
+        "scope": "html",
+        "body": [
+            "<?php",
+            "\t\\$args = [",
+            "\t\t'post_type'      => '${1:POST_TYPE}',",
+            "\t\t'posts_per_page' => -1,",
+            "\t\t'order'          => 'ASC',",
+            "\t];",
+            "",
+            "\t$LINE_COMMENT Remove Unnecessary Querying",
+            "\t\\$args['no_found_rows']          = true;  $LINE_COMMENT No Pagination",
+            "\t\\$args['update_post_meta_cache'] = false; $LINE_COMMENT No Meta Query",
+            "\t\\$args['update_post_term_cache'] = false; $LINE_COMMENT No Term Query",
+            "",
+            "\t\\$post_query = new WP_Query( \\$args );",
+            "?>",
+            "",
+            "<?php if ( \\$post_query->have_posts() ) : ?>",
+            "\t<?php while ( \\$post_query->have_posts() ) : \\$post_query->the_post(); ?>",
+            "",
+            "\t\t$2",
+            "",
+            "\t<?php endwhile; ?>",
+            "<?php endif; ?>",
+            "<?php wp_reset_postdata(); ?>$0"
+        ]
+    },
+    "WP: Query (PHP)": {
+        "prefix": "wp-q",
+        "scope": "php",
+        "body": [
+            "\\$args = [",
+            "\t'post_type'      => '${1:POST_TYPE}',",
+            "\t'posts_per_page' => -1,",
+            "\t'order'          => 'ASC',",
+            "];",
+            "",
+            "$LINE_COMMENT Remove Unnecessary Querying",
+            "\\$args['no_found_rows']          = true;  $LINE_COMMENT No Pagination",
+            "\\$args['update_post_meta_cache'] = false; $LINE_COMMENT No Meta Query",
+            "\\$args['update_post_term_cache'] = false; $LINE_COMMENT No Term Query",
+            "",
+            "\\$post_query = new WP_Query( \\$args );",
+            "",
+            "if ( \\$post_query->have_posts() ) {",
+            "\twhile ( \\$post_query->have_posts() ) : { \\$post_query->the_post();",
+            "",
+            "\t\t$2",
+            "",
+            "\t}",
+            "}",
+            "wp_reset_postdata();$0"
+        ]
+    },
+    // WP Query: Tax Query
+    "WP: Query[Tax] (HTML)": {
+        "prefix": "wp-tq",
+        "scope": "html",
+        "body": [
+            "<?php",
+            "\t\\$args['tax_query'] = [[",
+            "\t\t'taxonomy' => '${1:TAXONOMY}',",
+            "\t\t'field'    => '${2|term_id,slug|}',",
+            "\t\t'terms'    => '${3:TERM}'",
+            "\t]];",
+            "?>$0"
+        ]
+    },
+    "WP: Query[Tax] (PHP)": {
+        "prefix": "wp-tq",
+        "scope": "php",
+        "body": [
+            "'tax_query'     => [",
+            "\t[",
+            "\t\t'taxonomy' => '${1:TAXONOMY}',",
+            "\t\t'field'    => '${2|term_id,slug|}',",
+            "\t\t'terms'    => '${3:TERM}'",
+            "\t]",
+            "],$0"
+        ]
+    },
+    // WP Query: Meta Query
+    "WP: Query[Meta] (HTML)": {
+        "prefix": "wp-mq",
+        "scope": "html",
+        "body": [
+            "<?php",
+            "\t\\$args['meta_query'] = [[",
+            "\t\t'key'     => '${1:KEY}',",
+            "\t\t'value'   => '${2:VALUE}',",
+            "\t\t'compare' => '${3|=,!=,>,>=,<,<=,LIKE,NOT LIKE,IN,NOT IN,BETWEEN,NOT BETWEEN,EXISTS,NOT EXISTS|}'",
+            "\t]];",
+            "?>$0"
+        ]
+    },
+    "WP: Query[Meta] (PHP)": {
+        "prefix": "wp-mq",
+        "scope": "php",
+        "body": [
+            "'meta_query'     => [",
+            "\t[",
+            "\t\t'key'     => '${1:KEY}',",
+            "\t\t'value'   => '${2:VALUE}',",
+            "\t\t'compare' => '${3|=,!=,>,>=,<,<=,LIKE,NOT LIKE,IN,NOT IN,BETWEEN,NOT BETWEEN,EXISTS,NOT EXISTS|}'",
+            "\t]",
+            "]$0,"
+        ]
+    },
+    // Get Posts
+    "WP: Get Posts (HTML)": {
+        "prefix": "wp-gp",
+        "scope": "html",
+        "body": [
+            "<?php",
+            "\t\\$args = [",
+            "\t\t'post_type'      => '${1:POST_TYPE}',",
+            "\t\t'posts_per_page' => -1,",
+            "\t\t'order'          => 'ASC',",
+            "\t];",
+            "",
+            "\t${2:\\$VARIABLE} = get_posts( \\$args );",
+            "?>$0"
+        ]
+    },
+    "WP: Get Posts (PHP)": {
+        "prefix": "wp-gp",
+        "scope": "php",
+        "body": [
+            "\\$args = [",
+            "\t'post_type'      => '${1:POST_TYPE}',",
+            "\t'posts_per_page' => -1,",
+            "\t'order'          => 'ASC',",
+            "];",
+            "",
+            "${2:\\$VARIABLE} = get_posts( \\$args );$0"
+        ]
+    },
+    "WP: Get Posts (HTML) (Deprecated)": {
+        "prefix": "gp",
+        "scope": "html",
+        "body": [
+            "<?php",
+            "\t\\$args = [",
+            "\t\t'post_type'      => '${1:POST_TYPE}',",
+            "\t\t'posts_per_page' => -1,",
+            "\t\t'order'          => 'ASC',",
+            "\t];",
+            "",
+            "\t${2:\\$VARIABLE} = get_posts( \\$args );",
+            "?>$0"
+        ]
+    },
+    "WP: Get Posts (PHP) (Deprecated)": {
+        "prefix": "gp",
+        "scope": "php",
+        "body": [
+            "\\$args = [",
+            "\t'post_type'      => '${1:POST_TYPE}',",
+            "\t'posts_per_page' => -1,",
+            "\t'order'          => 'ASC',",
+            "];",
+            "",
+            "${2:\\$VARIABLE} = get_posts( \\$args );$0"
+        ]
+    },
+    // While Have Posts
+    "WP: While Have Posts (HTML)": {
+        "prefix": "wp-whp",
+        "scope": "html",
+        "body": [
+            "<?php if ( have_posts() ) : ?>",
+            "",
+            "\t<?php while ( have_posts() ) : the_post(); ?>",
+            "",
+            "\t\t<?php the_content(); ?>",
+            "",
+            "\t<?php endwhile; ?>",
+            "",
+            "<?php endif; ?>",
+            "<?php wp_reset_postdata(); ?>"
+        ]
+    },
+    "WP: While Have Posts (PHP)": {
+        "prefix": "wp-whp",
+        "scope": "php",
+        "body": [
+            "if ( have_posts() ) {",
+            "\twhile ( have_posts() ) : the_post(); {",
+            "",
+            "\t\tthe_content();",
+            "",
+            "\t}",
+            "}",
+            "wp_reset_postdata();"
+        ]
+    },
+    "WP: While Have Posts (HTML) (Deprecated)": {
+        "prefix": "have_posts",
+        "scope": "html",
+        "body": [
+            "<?php if ( have_posts() ) : ?>",
+            "",
+            "\t<?php while ( have_posts() ) : the_post(); ?>",
+            "",
+            "\t\t<?php the_content(); ?>",
+            "",
+            "\t<?php endwhile; ?>",
+            "",
+            "<?php endif; ?>",
+            "<?php wp_reset_postdata(); ?>"
+        ]
+    },
+    "WP: While Have Posts (PHP) (Deprecated)": {
+        "prefix": "have_posts",
+        "scope": "php",
+        "body": [
+            "if ( have_posts() ) {",
+            "\twhile ( have_posts() ) : the_post(); {",
+            "",
+            "\t\tthe_content();",
+            "",
+            "\t}",
+            "}",
+            "wp_reset_postdata();"
+        ]
+    },
+    // Nav Menu
+    "WP: Nav Menu (HTML)": {
+        "prefix": "wp-n",
+        "scope": "html",
+        "body": [
+            "<?php",
+            "\t\\$nav_args = [",
+            "\t\t'theme_location'  => '${1:site-nav}',",
+            "\t\t'container_class' => '${2:o-header__nav}',",
+            "\t\t'menu_class'      => '${3:m-page-nav}',",
+            "\t\t'link_class'      => '${4:a-nav-link}',",
+            "\t];",
+            "\twp_nav_menu( \\$nav_args );",
+            "?>$0"
+        ]
+    },
+    "WP: Nav Menu (PHP)": {
+        "prefix": "wp-n",
+        "scope": "php",
+        "body": [
+            "\\$nav_args = [",
+            "\t'theme_location'  => '${1:site-nav}',",
+            "\t'container_class' => '${2:o-header__nav}',",
+            "\t'menu_class'      => '${3:m-page-nav}',",
+            "\t'link_class'      => '${4:a-nav-link}',",
+            "];",
+            "wp_nav_menu( \\$nav_args );$0",
+        ]
+    },
+    // Register Post Type
+    "WP: Register Post Type (Deprecated)": {
+        "prefix": "rpt",
+        "scope": "php",
+        "body": [
+            "register_post_type('${1:SLUG}', [",
+            "\t'label'  => '${2:PLURAL_NAME}',",
+            "\t'labels' => [",
+            "\t\t'singular_name'      => '${2:SINGULAR_NAME}',",
+            "\t\t'add_new_item'       => 'Add ${2:SINGULAR_NAME}',",
+            "\t\t'edit_item'          => 'Edit ${2:SINGULAR_NAME}',",
+            "\t\t'new_item'           => 'New ${2:SINGULAR_NAME}',",
+            "\t\t'view_item'          => 'View ${2:SINGULAR_NAME}',",
+            "\t\t'search_items'       => 'Search ${3:PLURAL_NAME}',",
+            "\t\t'not_found'          => 'No ${3:PLURAL_NAME} Found',",
+            "\t\t'not_found_in_trash' => 'No ${3:PLURAL_NAME} Found in Trash',",
+            "\t\t'parent_item_colon'  => 'Parent ${2:SINGULAR_NAME}',",
+            "\t],",
+            "\t'public'              => true,",
+            "\t'exclude_from_search' => false,",
+            "\t'publicly_queryable'  => true,",
+            "\t'show_ui'             => true,",
+            "\t'show_in_nav_menus'   => true,",
+            "\t'show_in_menu'        => true,",
+            "\t'show_in_admin_bar'   => true,",
+            "\t'menu_position'       => null,",
+            "\t'menu_icon'           => 'dashicons-${4|admin-appearance,admin-collapse,admin-comments,admin-generic,admin-home,admin-links,admin-media,admin-network,admin-page,admin-plugins,admin-post,admin-settings,admin-site,admin-tools,admin-users,align-center,align-left,align-none,align-right,analytics,arrow-down,arrow-down-alt,arrow-down-alt2,arrow-left,arrow-left-alt,arrow-left-alt2,arrow-right,arrow-right-alt,arrow-right-alt2,arrow-up,arrow-up-alt,arrow-up-alt2,art,awards,backup,book,book-alt,businessman,calendar,camera,cart,category,chart-area,chart-bar,chart-line,chart-pie,cloud,dashboard,dismiss,download,edit,editor-aligncenter,editor-alignleft,editor-alignright,editor-bold,editor-customchar,editor-distractionfree,editor-help,editor-indent,editor-insertmore,editor-italic,editor-justify,editor-kitchensink,editor-ol,editor-outdent,editor-paste-text,editor-paste-word,editor-quote,editor-removeformatting,editor-rtl,editor-spellcheck,editor-strikethrough,editor-textcolor,editor-ul,editor-underline,editor-unlink,editor-video,exerpt-view,facebook,facebook-alt,feedback,flag,format-aside,format-audio,format-chat,format-gallery,format-image,format-quote,format-status,format-video,forms,googleplus,groups,hammer,id,id-alt,image-crop,image-flip-horizontal,image-flip-vertical,image-rotate-left,image-rotate-right,images-alt,images-alt2,info,leftright,lightbulb,list-view,location,location-alt,lock,marker,menu,migrate,minus,networking,no,no-alt,performance,plus,portfolio,post-status,pressthis,products,redo,rss,screenoptions,search,share,share-alt,share-alt2,shield,shield-alt,slides,smiley,sort,star-empty,star-filled,star-half,tag,translation,trash,twitter,undo,update,upload,vault,video-alt,video-alt2,video-alt3,visibility,welcome-add-page,welcome-comments,welcome-learn-more,welcome-view-site,welcome-widgets-menus,welcome-write-blog,wordpress,wordpress-alt,yes|}',",
+            "\t'capability_type'     => 'post',",
+            "\t'hierarchical'        => true,",
+            "\t'supports'            => ['title'],",
+            "\t'has_archive'         => 'page',",
+            "\t'rewrite'             => ['slug' => '${1:SLUG}'],",
+            "\t'query_var'           => true,",
+            "\t'show_in_rest'        => true",
+            "]);",
+        ]
+    },
+    // Register Taxonomy
+    "WP: Register Taxonomy (Deprecated)": {
+        "prefix": "rt",
+        "scope": "php",
+        "body": [
+            "register_taxonomy('${2:TAX_SLUG}', ['${1:POST_SLUG}'], [",
+            "\t'hierarchical'      => true,",
+            "\t'labels'            => [",
+            "\t\t'name'              => _x( '${3:PLURAL_NAME}', 'taxonomy general name' ),",
+            "\t\t'singular_name'     => _x( '${4:SINGULAR_NAME}', 'taxonomy singular name' ),",
+            "\t\t'search_items'      => __( 'Search ${3:PLURAL_NAME}' ),",
+            "\t\t'all_items'         => __( 'All ${3:PLURAL_NAME}' ),",
+            "\t\t'parent_item'       => __( 'Parent ${4:SINGULAR_NAME}' ),",
+            "\t\t'parent_item_colon' => __( 'Parent ${4:SINGULAR_NAME}:' ),",
+            "\t\t'edit_item'         => __( 'Edit ${4:SINGULAR_NAME}' ),",
+            "\t\t'update_item'       => __( 'Update ${4:SINGULAR_NAME}' ),",
+            "\t\t'add_new_item'      => __( 'Add New ${4:SINGULAR_NAME}' ),",
+            "\t\t'new_item_name'     => __( 'New ${4:SINGULAR_NAME} Name' ),",
+            "\t\t'menu_name'         => __( '${3:PLURAL_NAME}' )",
+            "\t],",
+            "\t'public'            => true,",
+            "\t'show_ui'           => true,",
+            "\t'show_admin_column' => true,",
+            "\t'query_var'         => true,",
+            "\t'rewrite'           => ['slug' => '${1:POST_SLUG}-${2:TAX_SLUG}']",
+            "]);",
+        ]
+    },
+    // Featured Image
+    "WP: Featured Image": {
+        "prefix": "wp-fi",
+        "scope": "php",
+        "body": "get_the_post_thumbnail_url( ${1:POST}, '${2:large}' )$0"
+    },
+    "WP: Featured Image (Deprecated)": {
+        "prefix": "fi",
+        "scope": "php",
+        "body": "get_the_post_thumbnail_url( ${1:POST}, '${2:large}' )$0"
+    },
+    // Enqueue File
+    "WP: Enqueue File": {
+        "prefix": "wp-enq",
+        "scope": "php",
+        "body": "wp_enqueue_${1|script,style|}( '${2:NAME}', get_template_directory_uri() . '/assets/${3:PATH}', ${4|[],['jquery']|}, get_theme_version()${5| ,\\, true |});$0"
+    },
+    "WP: Localize w/ AJAX": {
+        "prefix": "wp-laj",
+        "scope": "php",
+        "body": [
+            "wp_localize_script( '${1:ENQUEUE_NAME}', 'AJAX', [",
+            "\t'url'   => admin_url( 'admin-ajax.php' ),",
+            "\t'nonce' => wp_create_nonce( 'ajax-nonce' )",
+            "]);$0"
+        ]
+    },
+    // Ajax Request
+    "WP: Ajax Request": {
+        "prefix": "wp-ajr",
+        "scope": "php",
+        "body": [
+            "function ${1:FUNCTION_NAME}() {",
+            "\t\\$nonce = \\$_POST['nonce'];",
+            "\tif ( ! wp_verify_nonce( \\$nonce, 'ajax-nonce' ) ) {",
+            "\t\tdie ( 'Nope!' );",
+            "\t}",
+            "",
+            "\tob_start();",
+            "\t\\$data = ob_get_clean();",
+            "",
+            "\twp_send_json_success(\\$data);",
+            "}",
+            "add_action( 'wp_ajax_${1:FUNCTION_NAME}', '${1:FUNCTION_NAME}' );",
+            "add_action( 'wp_ajax_nopriv_${1:FUNCTION_NAME}', '${1:FUNCTION_NAME}' );$0"
+        ]
+    },
+    // Gravity Form
+    "WP: Gravity Form (HTML)": {
+        "prefix": "wp-gr",
+        "scope": "html",
+        "body": "<?php gravity_form( ${1:FORM_ID}, false, false, false, null, ${2|true,false|} ); ?>$0"
+    },
+    "WP: Gravity Form (PHP)": {
+        "prefix": "wp-gr",
+        "scope": "php",
+        "body": "gravity_form( ${1:FORM_ID}, false, false, false, null, ${2|true,false|} );$0"
+    },
+    // Action: Create New Admin
+    "🤦 Forgot the Login?": {
+        "prefix": "wp-forgot",
+        "scope": "php",
+        "body": [
+            "function create_new_admin() {",
+            "\t\\$username = '${1:USERNAME}';",
+            "\t\\$email    = '${2:EMAIL}';",
+            "\t\\$password = '${3:PASSWORD}';",
+            "",
+            "\tif ( ! username_exists(\\$username) && ! email_exists(\\$email) ) {",
+            "\t\t\\$user_id = wp_create_user( \\$username, \\$password, \\$email );",
+            "",
+            "\t\tif ( !is_wp_error(\\$user_id) ) {",
+            "\t\t\t\\$user = get_user_by('id', \\$user_id);",
+            "\t\t\t\\$user->set_role( 'administrator' );",
+            "\t\t}",
+            "\t}",
+            "}",
+            "add_action('init', 'create_new_admin');$0"
+        ]
+    },
+    // wp-config: debug logging
+    "WP: Debug Log Definitions": {
+        "prefix": "wp-debug",
+        "scope": "php",
+        "body": [
+            "define( 'WP_DEBUG', true );",
+            "define( 'WP_DEBUG_LOG', true );",
+            "define( 'WP_DEBUG_DISPLAY', false );"
+        ]
+    },
+    // wp-config: Site URL settings
+    "WP: Site URLs": {
+        "prefix": "wp-urls",
+        "scope": "php",
+        "body": [
+            "define( 'WP_HOME', 'http://local.${1:SITENAME}.com' );",
+            "define( 'WP_SITEURL', 'http://local.${1:SITENAME}.com' );"
+        ]
+    }
+}

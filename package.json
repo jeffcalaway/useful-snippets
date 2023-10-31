@@ -1,0 +1,119 @@
+{
+	"name": "useful-snippets",
+	"publisher": "jeffcalaway",
+	"displayName": "Useful Snippets",
+	"description": "Snippets that are useful for Useful Group",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com:jeffcalaway/useful-snippets.git"
+	},
+	"keywords": [
+		"Snippets",
+		"WordPress",
+		"ACF"
+	],
+	"version": "1.0.0",
+	"engines": {
+		"vscode": "^1.50.0"
+	},
+	"categories": [
+		"Snippets"
+	],
+	"contributes": {
+		"snippets": [
+			{
+				"path": "./snippets/php.code-snippets"
+			},
+			{
+				"path": "./snippets/wp.code-snippets"
+			},
+			{
+				"path": "./snippets/class.code-snippets"
+			},
+			{
+				"path": "./snippets/acf.code-snippets"
+			},
+			{
+				"path": "./snippets/framework.code-snippets"
+			},
+			{
+				"path": "./snippets/documentation.code-snippets"
+			},
+			{
+				"path": "./snippets/stories.code-snippets"
+			},
+			{
+				"language": "html",
+				"path": "./snippets/html.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./snippets/javascript.json"
+			},
+			{
+				"language": "scss",
+				"path": "./snippets/scss.json"
+			}
+		],
+		"configuration": {
+			"type": "object",
+			"title": "Laravel goto view configuration",
+			"properties": {
+				"wordpress_snippets.quickJump": {
+					"type": "boolean",
+					"default": true,
+					"description": "Use 'Ctrl' or 'Alt' + click"
+				},
+				"wordpress_snippets.maxLinesCount": {
+					"type": "integer",
+					"default": 666,
+					"description": "Maximum number of scanning rows"
+				},
+				"wordpress_snippets.regex": {
+					"type": "string",
+					"default": "(?<=render_template_part\\(\\s?['\"])([^'\"]+)",
+					"description": "Custom regex for matching strings"
+				},
+				"wordpress_snippets.components": {
+					"type": "string",
+					"default": "template-parts",
+					"description": "Folder"
+				},
+				"wordpress_snippets.scripts": {
+					"type": "string",
+					"default": "template-parts",
+					"description": "Folder"
+				},
+				"wordpress_snippets.styles": {
+					"type": "string",
+					"default": "template-parts",
+					"description": "Folder"
+				}
+			}
+		}
+	},
+	"activationEvents": [
+		"onLanguage:php"
+	],
+	"main": "./out/extension.js",
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"lint": "eslint src --ext ts"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.4",
+		"@types/mocha": "^9.0.0",
+		"@types/node": "14.x",
+		"@types/vscode": "^1.50.0",
+		"@typescript-eslint/eslint-plugin": "^5.1.0",
+		"@typescript-eslint/parser": "^5.1.0",
+		"@vscode/test-electron": "^1.6.2",
+		"eslint": "^8.1.0",
+		"glob": "^7.1.7",
+		"mocha": "^9.1.3",
+		"typescript": "^4.4.4"
+	}
+}

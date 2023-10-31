@@ -1,0 +1,60 @@
+{
+    "Stories: Class": {
+        "prefix": "st-c",
+        "scope": "html",
+        "body": [
+            "<?php",
+            "",
+            "use Useful_Stories\\Library\\Stories;",
+            "",
+            "class ${TM_FILENAME_BASE/(([^-\\.]+)(-)?)(.stories)?/${2:/capitalize}${3:+_}/g} extends Stories {",
+            "\tfunction __construct(){",
+            "\t\t\\$this->title = '${RELATIVE_FILEPATH/.*\\\/([^\\\/]+)\\\/[^\\\/]+\\\/[^\\\/]+\\.php$/${1:/capitalize}/}/${TM_FILENAME_BASE/(([^-\\.]+)(-)?)(.stories)?/${2:/capitalize}${3:+ }/g}';",
+            "\t\t\\$this->defaults = [",
+            "\t\t\t$0",
+            "\t\t];",
+            "\t}",
+            "",
+            "\tfunction template(\\$args=[]) {",
+            "\t\t\\$args = wp_parse_args(\\$args, \\$this->defaults);",
+            "",
+            "\t\trender_template_part('${RELATIVE_FILEPATH/.*\\\/([^\\\/]+)\\\/[^\\\/]+\\\/[^\\\/]+\\.php$/${1:/lowercase}/}/${TM_FILENAME_BASE/([a-z]*)(.stories$)?/${1:/lowercase}/g}', \\$args);",
+            "\t}",
+            "",
+            "\tfunction initialize() {",
+            "\t\t\\$default = \\$this->add_story('Default', [\\$this, 'template']);",
+            "\t}",
+            "}"
+        ]
+    },
+    "Stories: Story": {
+        "prefix": "st-s",
+        "scope": "php",
+        "body": [
+            "$${1:STORY_VAR} = \\$this->add_story('${2:STORY_NAME}', [\\$this, 'template']);",
+            "$${1:STORY_VAR}->args = [",
+            "\t'${3:PROP_KEY}' => ${4:PROP_VALUE}$0",
+            "];"
+        ]
+    },
+    "Stories: Story (Modified)": {
+        "prefix": "st-sm",
+        "scope": "php",
+        "body": [
+            "\\$${1:${TM_SELECTED_TEXT/(.*)/${1:/downcase}/}} = \\$this->add_story('${2:${TM_SELECTED_TEXT/(.*)/${1:/capitalize}/}}', [\\$this, 'template']);",
+            "\\$${1:${TM_SELECTED_TEXT/(.*)/${1:/downcase}/}}->args = [",
+            "\t'is_${1:${TM_SELECTED_TEXT/(.*)/${1:/downcase}/}}' => true",
+            "];$0"
+        ]
+    },
+    "Stories: Placeholder Text": {
+        "prefix": "st-pt",
+        "scope": "php",
+        "body": "us_get_lorem_ipsum()"
+    },
+    "Stories: Placeholder Image": {
+        "prefix": "st-pi",
+        "scope": "php",
+        "body": "us_get_placeholder_image('${1:Width}', '${2:Height}')$0"
+    },
+}

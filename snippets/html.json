@@ -1,0 +1,29 @@
+{
+    "Page Setup": {
+        "prefix": "h-set",
+        "body": [
+            "<!DOCTYPE html>",
+            "<html lang=\"en\">",
+            "<head>",
+            "\t<meta charset=\"UTF-8\">",
+            "\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=2\">",
+            "\t<title>${1:TITLE}</title>",
+            "</head>",
+            "<body>",
+            "",
+            "\t$2",
+            "",
+            "</body>",
+            "",
+            "</html>$0"
+        ]
+    },
+    "Copyright Entity": {
+        "prefix": "copy",
+        "body": "&copy;"
+    },
+    "Inline Background Image": {
+        "prefix": "bgimg",
+        "body": "style=\"background-image: url('${1:IMAGE_PATH}')\"$0"
+    }
+}

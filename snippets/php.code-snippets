@@ -1,0 +1,144 @@
+{
+    // PHP Tags
+    "PHP: Tags (Inline)": {
+        "prefix": "php",
+        "scope": "html",
+        "body": "<?php $1 ?>$0"
+    },
+    "PHP: Tags (Expanded)": {
+        "prefix": "phpp",
+        "scope": "html",
+        "body": [
+            "<?php",
+            "\t$0",
+            "?>"
+        ]
+    },
+
+    // If Statement
+    "PHP: If (HTML)": {
+        "prefix": "if",
+        "scope": "html",
+        "body": [
+            "<?php if ( $1 ) : ?>",
+            "\t$2",
+            "<?php endif; ?>$0"
+        ]
+    },
+    "PHP: If (PHP)": {
+        "prefix": "if",
+        "scope": "php",
+        "body": [
+            "if ( $1 ) {",
+            "\t$2",
+            "}$0"
+        ]
+    },
+    "PHP: Else (HTML)": {
+        "prefix": "else",
+        "scope": "html",
+        "body": [
+            "<?php else : ?>",
+            "\t$0"
+        ]
+    },
+    "PHP: Else (PHP)": {
+        "prefix": "else",
+        "scope": "php",
+        "body": [
+            "else {",
+            "\t$1",
+            "}$0"
+        ]
+    },
+    "PHP: Else If (HTML)": {
+        "prefix": "elseif",
+        "scope": "html",
+        "body": [
+            "<?php elseif ( $1 ) : ?>",
+            "\t$0"
+        ]
+    },
+    "PHP: Else If (PHP)": {
+        "prefix": "elseif",
+        "scope": "php",
+        "body": [
+            "elseif ( $1 ) {",
+            "\t$2",
+            "}$0"
+        ]
+    },
+
+    // For Loop
+    "PHP: For (HTML)": {
+        "prefix": "for",
+        "scope": "html",
+        "body": [
+            "<?php for (\\$i=0; \\$i <= ${1:NUMBER}; \\$i++) : ?>",
+            "\t$2",
+            "<?php endfor; ?>$0"
+        ]
+    },
+    "PHP: For (PHP)": {
+        "prefix": "for",
+        "scope": "php",
+        "body": [
+            "for (\\$i=0; \\$i <= ${1:NUMBER}; \\$i++) {",
+            "\t$2",
+            "}$0"
+        ]
+    },
+
+    // For Each Loop
+    "PHP: For Each (HTML)": {
+        "prefix": "foreach",
+        "scope": "html",
+        "body": [
+            "<?php foreach (${1:\\$ARRAY_VARIABLE} as ${2:\\$VARIABLE}) : ?>",
+            "\t$3",
+            "<?php endforeach; ?>$0"
+        ]
+    },
+    "PHP: For Each (PHP)": {
+        "prefix": "foreach",
+        "scope": "php",
+        "body": [
+            "foreach (${1:\\$ARRAY_VARIABLE} as ${2:\\$VARIABLE}) {",
+            "\t$3",
+            "}$0"
+        ]
+    },
+
+    // Conditional End
+    "PHP: End": {
+        "prefix": "end",
+        "scope": "html",
+        "body": "<?php end${1|if,for,foreach,while|}; ?>$0"
+    },
+
+    // Class Setup
+    "PHP: Class (PHP)": {
+        "prefix": "class",
+        "scope": "php",
+        "body": [
+            "class ${1:CLASS_NAME} {",
+            "\tpublic function __construct() {",
+            "\t\t$0",
+            "\t}",
+            "}",
+            "new ${1:CLASS_NAME}();"
+        ]
+    },
+
+    // Year
+    "PHP: Year (HTML)": {
+        "prefix": "year",
+        "scope": "html",
+        "body": "<?php echo date('Y'); ?>$0"
+    },
+    "PHP: Year (PHP)": {
+        "prefix": "year",
+        "scope": "html",
+        "body": "date('Y')"
+    },
+}

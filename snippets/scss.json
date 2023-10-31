@@ -1,0 +1,114 @@
+{
+    "Include Mixin": {
+        "prefix": "inc",
+        "body": "@include ${1:MIXIN_NAME};$0"
+    },
+    "Breakpoint Mixin": {
+        "prefix": "m-break",
+        "body": [
+            "@include break-at(${1|desktop,laptop,tablet-landscape,tablet-midpoint,tablet-portrait,phablet,large-phone,average-phone,small-phone|}) {",
+            "\t$0",
+            "}"
+        ]
+    },
+    "Font Family Mixin": {
+        "prefix": "m-ff",
+        "body": "@include font-family($1);$0"
+    },
+    "Font Size Mixin": {
+        "prefix": "m-fs",
+        "body": "@include font-size($1);$0"
+    },
+    "Center Position Mixin": {
+        "prefix": "m-cp",
+        "body": "@include center-position;"
+    },
+    "Set Behind Mixin": {
+        "prefix": "m-sb",
+        "body": "@include set-behind('${1:SELECTOR}');$0"
+    },
+    "Margin Auto Mixin": {
+        "prefix": "m-ma",
+        "body": "@include margin-auto;"
+    },
+    "Set Overlay Mixin": {
+        "prefix": "m-so",
+        "body": "@include set-overlay;"
+    },
+    "Clearfix Mixin": {
+        "prefix": "m-cf",
+        "body": "@include clear-fix;"
+    },
+    "Transition Mixin": {
+        "prefix": "m-t",
+        "body": "@include transition$1;$0"
+    },
+    "Placholder Color Mixin": {
+        "prefix": "m-pc",
+        "body": "@include placeholder-color(${1:COLOR});$0"
+    },
+    "Background Cover Mixin": {
+        "prefix": "m-bc",
+        "body": "@include bg-cover;"
+    },
+    "Grayscale Mixin": {
+        "prefix": "m-gs",
+        "body": "@include set-grayscale;"
+    },
+    "Aspect Ratio Mixin": {
+        "prefix": "m-ar",
+        "body": "@include aspect-ratio(${1:WIDTH}, ${2:HEIGHT}$3);$0"
+    },
+    "Flexbox Grid Mixin": {
+        "prefix": "m-gr",
+        "body": "@include grid(${1:COLUMN_COUNT}, ${2:COLUMN_GAP});$0"
+    },
+    "Flexbox Grid Shift Mixin": {
+        "prefix": "m-grs",
+        "body": "@include grid-shift(${1:COLUMN_COUNT}, ${2:COLUMN_GAP});$0"
+    },
+    "Import File": {
+        "prefix": "imp",
+        "body": "@import \"${1:PATH}\";$0"
+    },
+    "Color Variable": {
+        "prefix": "c",
+        "body": "\\$color-${1:COLOR}$0"
+    },
+    "Color CSS Variable": {
+        "prefix": "cc",
+        "body": "var(--color--${1:COLOR})$0"
+    },
+    "CSS Variable": {
+        "prefix": "var",
+        "body": "var(--${1:SUBJECT}--${2:VARIABLE})$0"
+    },
+    "Keyboard Focus": {
+        "prefix": "focus",
+        "body": [
+            ".keyboard-in-use &:focus {",
+            "\t@include theme-focus;",
+            "}"
+        ]
+    },
+    "Parent Class": {
+        "prefix": "class",
+        "body": ".${RELATIVE_FILEPATH/.*\\\/(([a-z])[^\\\/]+)\\\/[^\\\/]+\\\/[^\\\/]+\\.scss$/$2/}-${TM_FILENAME_BASE/(^[a-z]*)?/${1:/lowercase}/g}"
+    },
+    "Before Pseudo": {
+        "prefix": "before",
+        "body": [
+            "&:before {",
+            "\tcontent: '';$0",
+            "}"
+        ]
+    },
+    "After Pseudo": {
+        "prefix": "after",
+        "body": [
+            "&:after {",
+            "\tcontent: '';$0",
+            "}"
+        ]
+    }
+}

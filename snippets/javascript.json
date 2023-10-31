@@ -1,0 +1,139 @@
+{
+    "Page Setup w/ jQuery": {
+        "prefix": "j-set",
+        "body": [
+            "jQuery($ => {",
+            "",
+            "\t$0",
+            "",
+            "});"
+        ]
+    },
+    "Page Setup w/ jQuery (Deprecated)": {
+        "prefix": "pagejqo",
+        "body": [
+            "jQuery(document).ready(function($) {",
+            "",
+            "\t$0",
+            "",
+            "});"
+        ]
+    },
+    "Plugin File Setup": {
+        "prefix": "j-pset",
+        "body": [
+            "jQuery($ => {",
+            "\tclass ${TM_FILENAME_BASE/([^-]*)(-?)/${1:/capitalize}/g} {",
+            "\t\tconstructor(element) {",
+            "\t\t\tthis._        = element;",
+            "\t\t\tthis._element = $(element);",
+            "",
+            "\t\t\tthis.init();",
+            "\t\t}",
+            "",
+            "\t\t//≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡",
+            "\t\t// ✅ Initialize",
+            "\t\t//≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡",
+            "",
+            "\t\tinit() {",
+            "\t\t\tthis.setupHandlers();",
+            "\t\t\tthis._element.trigger( 'init', this );",
+            "\t\t}",
+            "",
+            "\t\t//≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡",
+            "\t\t// ✅ Setup Handlers",
+            "\t\t//≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡",
+            "",
+            "\t\tsetupHandlers() {",
+            "\t\t}",
+            "\t}",
+            "",
+            "\t//≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡",
+            "\t// ✅ Setup jQuery Plugin",
+            "\t//≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡",
+            "",
+            "\t$.fn.${TM_FILENAME_BASE/([^-]*)(-?)/${1:/lowercase}${2:+_}/g} = function() {",
+            "\t\tvar _ = this,",
+            "\t\t\t\topt = arguments[0],",
+            "\t\t\t\targs = Array.prototype.slice.call(arguments, 1),",
+            "\t\t\t\tl = _.length,",
+            "\t\t\t\ti,",
+            "\t\t\t\tret;",
+            "\t\tfor (i = 0; i < l; i++) {",
+            "\t\t\tif (typeof opt == 'object' || typeof opt == 'undefined')",
+            "\t\t\t\t_[i].${TM_FILENAME_BASE/([^-]*)(-?)/${1:/lowercase}${2:+_}/g} = new ${TM_FILENAME_BASE/([^-]*)(-?)/${1:/capitalize}/g}(_[i], opt);",
+            "\t\t\telse",
+            "\t\t\t\tret = _[i].${TM_FILENAME_BASE/([^-]*)(-?)/${1:/lowercase}${2:+_}/g}[opt].apply(_[i].${TM_FILENAME_BASE/([^-]*)(-?)/${1:/lowercase}${2:+_}/g}, args);",
+            "\t\t\tif (typeof ret != 'undefined') return ret;",
+            "\t\t}",
+            "\t\treturn _;",
+            "\t}",
+            "",
+            "\t//≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡",
+            "\t// ✅ Run",
+            "\t//≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡",
+            "",
+            "\t$('.${RELATIVE_FILEPATH/.*\\\/(([a-z])[^\\\/]+)\\\/[^\\\/]+\\\/[^\\\/]+\\.php$/$2/}-${TM_FILENAME_BASE/(^[a-z]*)?/${1:/lowercase}/g}').${TM_FILENAME_BASE/([^-]*)(-?)/${1:/lowercase}${2:+_}/g}();",
+            "});"
+        ]
+    },
+    "Console Log": {
+        "prefix": "_",
+        "body": "console.log( $1 );$0"
+    },
+    "Each (jQuery)": {
+        "prefix": "each",
+        "body": [
+            "$('${1:SELECTOR}').each(function() {",
+            "\t$0",
+            "});"
+        ]
+    },
+    "If": {
+        "prefix": "if",
+        "body": [
+            "if ( ${1:CONDITION} ) {",
+            "\t$0",
+            "}"
+        ]
+    },
+    "If Exists": {
+        "prefix": "exists",
+        "body": [
+            "if ( $('${1:SELECTOR}')[0] ) {",
+            "\t$0",
+            "}"
+        ]
+    },
+    "Send Ajax Request": {
+        "prefix": "j-aj",
+        "body": [
+            "function ${1:FUNCTION_NAME}() {",
+            "\tvar AjaxRunning = 0;",
+            "\t",
+            "\tif ( ! AjaxRunning ) {",
+            "\t\t\\$.ajax({",
+            "\t\t\ttype: 'POST',",
+            "\t\t\turl: AJAX.url,",
+            "\t\t\tdata: {",
+            "\t\t\t\taction: '${2:ACTION_NAME}',",
+            "\t\t\t\tnonce: AJAX.nonce,",
+            "\t\t\t},",
+            "\t\t\tdataType: 'json',",
+            "\t\t\tbeforeSend: function() {",
+            "\t\t\t\tAjaxRunning++;",
+            "\t\t\t},",
+            "\t\t\tsuccess: function( result ) {",
+            "\t\t\t\tif ( result.success ) {",
+            "\t\t\t\t\tconsole.log( `success: \\${AjaxRunning}` );",
+            "\t\t\t\t}",
+            "\t\t\t},",
+            "\t\t\tcomplete: function() {",
+            "\t\t\t\tAjaxRunning--;",
+            "\t\t\t}",
+            "\t\t});",
+            "\t}",
+            "}$0"
+        ]
+    }
+}
