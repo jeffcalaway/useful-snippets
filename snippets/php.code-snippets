@@ -159,7 +159,7 @@
         "scope": "php",
         "body": [
             "ob_start();",
-            "$0",
+            "\t$0",
             "\\$content = ob_get_clean();"
         ]
     },
