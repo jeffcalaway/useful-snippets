@@ -141,4 +141,26 @@
         "scope": "html",
         "body": "date('Y')"
     },
+
+    // ob_start
+    "PHP: ob_start (HTML)": {
+        "prefix": "ob",
+        "scope": "html",
+        "body": [
+            "<?php",
+            "\tob_start();",
+            "\t\t$0",
+            "\t\\$content = ob_get_clean();"
+            "?>"
+        ]
+    },
+    "PHP: ob_start (PHP)": {
+        "prefix": "ob",
+        "scope": "php",
+        "body": [
+            "ob_start();",
+            "$0",
+            "\\$content = ob_get_clean();"
+        ]
+    },
 }
