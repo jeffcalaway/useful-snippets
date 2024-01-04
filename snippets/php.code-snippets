@@ -163,4 +163,51 @@
             "\\$content = ob_get_clean();"
         ]
     },
+
+    // Array Fill
+    "PHP: Array Fill (3)": {
+        "prefix": "af3",
+        "scope": "php",
+        "body": [
+            "array_fill(0,3,["
+            "\t\\$0"
+            "])"
+        ]
+    },
+    "PHP: Array Fill (4)": {
+        "prefix": "af4",
+        "scope": "php",
+        "body": [
+            "array_fill(0,4,["
+            "\t\\$0"
+            "])"
+        ]
+    },
+    "PHP: Array Fill (5)": {
+        "prefix": "af5",
+        "scope": "php",
+        "body": [
+            "array_fill(0,5,["
+            "\t\\$0"
+            "])"
+        ]
+    },
+    "PHP: Array Fill (6)": {
+        "prefix": "af6",
+        "scope": "php",
+        "body": [
+            "array_fill(0,6,["
+            "\t\\$0"
+            "])"
+        ]
+    },
+    "PHP: Array Fill (8)": {
+        "prefix": "af8",
+        "scope": "php",
+        "body": [
+            "array_fill(0,8,["
+            "\t\\$0"
+            "])"
+        ]
+    },
 }
