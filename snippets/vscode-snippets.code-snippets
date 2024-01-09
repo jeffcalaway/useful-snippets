@@ -1,117 +1,117 @@
 {
-	"Snippet: File Name (Lowercase)": {
+	"📎 File Name (Lowercase)": {
         "prefix": "vs-fn-l",
         "body": "\\${TM_FILENAME_BASE\\/(([a-z]*)(-)?([a-z])?)/\\${2:/lowercase}\\${3:+-}\\${4:/lowercase}/g}"
     },
-    "Snippet: File Name (Capitalized)": {
+    "📎 File Name (Capitalized)": {
         "prefix": "vs-fn-c",
         "body": "\\${TM_FILENAME_BASE/(([a-z]*)(-)?([a-z])?)/\\${2:/capitalize}\\${3:+-}\\${4:/capitalize}/g}"
     },
-    "Snippet: File Name (Underscores & Lowercase)": {
+    "📎 File Name (Underscores & Lowercase)": {
         "prefix": "vs-fn-ul",
         "body": "\\${TM_FILENAME_BASE/(([a-z]*)(-)?([a-z])?)/\\${2:/lowercase}\\${3:+_}\\${4:/lowercase}/g}"
     },
-    "Snippet: File Name (Underscores & Capitalized)": {
+    "📎 File Name (Underscores & Capitalized)": {
         "prefix": "vs-fn-uc",
         "body": "\\${TM_FILENAME_BASE/(([a-z]*)(-)?([a-z])?)/\\${2:/capitalize}\\${3:+_}\\${4:/capitalize}/g}"
     },
-    "Snippet: File Name (Spaces & Lowercase)": {
+    "📎 File Name (Spaces & Lowercase)": {
         "prefix": "vs-fn-sl",
         "body": "\\${TM_FILENAME_BASE/(([a-z]*)(-)?([a-z])?)/\\${2:/lowercase}\\${3:+_}\\${4:/lowercase}/g}"
     },
-    "Snippet: File Name (Spaces & Capitalized)": {
+    "📎 File Name (Spaces & Capitalized)": {
         "prefix": "vs-fn-sc",
         "body": "\\${TM_FILENAME_BASE/(([a-z]*)(-)?([a-z])?)/\\${2:/capitalize}\\${3:+_}\\${4:/capitalize}/g}"
     },
 
-    "Snippet: Class File Name (Lowercase)": {
+    "📎 Class File Name (Lowercase)": {
         "prefix": "vs-cfn-l",
         "body": "\\${TM_FILENAME_BASE/((^class-)([a-z]*)(-)?([a-z])?)/\\${3:/lowercase}\\${4:+-}\\${5:/lowercase}/g}"
     },
-    "Snippet: Class File Name (Capitalized)": {
+    "📎 Class File Name (Capitalized)": {
         "prefix": "vs-cfn-c",
         "body": "\\${TM_FILENAME_BASE/((^class-)([a-z]*)(-)?([a-z])?)/\\${3:/capitalize}\\${4:+-}\\${5:/capitalize}/g}"
     },
-    "Snippet: Class File Name (Underscores & Lowercase)": {
+    "📎 Class File Name (Underscores & Lowercase)": {
         "prefix": "vs-cfn-ul",
         "body": "\\${TM_FILENAME_BASE/((^class-)([a-z]*)(-)?([a-z])?)/\\${3:/lowercase}\\${4:+_}\\${5:/lowercase}/g}"
     },
-    "Snippet: Class File Name (Underscores & Capitalized)": {
+    "📎 Class File Name (Underscores & Capitalized)": {
         "prefix": "vs-cfn-uc",
         "body": "\\${TM_FILENAME_BASE/((^class-)([a-z]*)(-)?([a-z])?)/\\${3:/capitalize}\\${4:+_}\\${5:/capitalize}/g}"
     },
-    "Snippet: Class File Name (Spaces & Lowercase)": {
+    "📎 Class File Name (Spaces & Lowercase)": {
         "prefix": "vs-cfn-sl",
         "body": "\\${TM_FILENAME_BASE/((^class-)([a-z]*)(-)?([a-z])?)/\\${3:/lowercase}\\${4:+ }\\${5:/lowercase}/g}"
     },
-    "Snippet: Class File Name (Spaces & Capitalized)": {
+    "📎 Class File Name (Spaces & Capitalized)": {
         "prefix": "vs-cfn-sc",
         "body": "\\${TM_FILENAME_BASE/((^class-)([a-z]*)(-)?([a-z])?)/\\${3:/capitalize}\\${4:+ }\\${5:/capitalize}/"
     },
 
-    "Snippet: Stories File Name (Lowercase)": {
+    "📎 Stories File Name (Lowercase)": {
         "prefix": "vs-sfn-l",
         "body": "\\${TM_FILENAME_BASE/(([a-z]*)(-)?([a-z])?).stories/\\${2:/lowercase}\\${3:+-}\\${4:/lowercase}/g}"
     },
-    "Snippet: Stories File Name (Capitalized)": {
+    "📎 Stories File Name (Capitalized)": {
         "prefix": "vs-sfn-c",
         "body": "\\${TM_FILENAME_BASE/(([a-z]*)(-)?([a-z])?).stories/\\${2:/capitalize}\\${3:+-}\\${4:/capitalize}/g}"
     },
-    "Snippet: Stories File Name (Underscores & Lowercase)": {
+    "📎 Stories File Name (Underscores & Lowercase)": {
         "prefix": "vs-sfn-ul",
         "body": "\\${TM_FILENAME_BASE/(([a-z]*)(-)?([a-z])?).stories/\\${2:/lowercase}\\${3:+_}\\${4:/lowercase}/g}"
     },
-    "Snippet: Stories File Name (Underscores & Capitalized)": {
+    "📎 Stories File Name (Underscores & Capitalized)": {
         "prefix": "vs-sfn-uc",
         "body": "\\${TM_FILENAME_BASE/(([a-z]*)(-)?([a-z])?).stories/\\${2:/capitalize}\\${3:+_}\\${4:/capitalize}/g}"
     },
-    "Snippet: Stories File Name (Spaces & Lowercase)": {
+    "📎 Stories File Name (Spaces & Lowercase)": {
         "prefix": "vs-sfn-sl",
         "body": "\\${TM_FILENAME_BASE/(([a-z]*)(-)?([a-z])?).stories/\\${2:/lowercase}\\${3:+ }\\${4:/lowercase}/g}"
     },
-    "Snippet: Stories File Name (Spaces & Capitalized)": {
+    "📎 Stories File Name (Spaces & Capitalized)": {
         "prefix": "vs-sfn-sc",
         "body": "\\${TM_FILENAME_BASE/(([a-z]*)(-)?([a-z])?).stories/\\${2:/capitalize}\\${3:+ }\\${4:/capitalize}/g}"
     },
 
-    "Snippet: Directory Name (Lowercase)": {
+    "📎 Directory Name (Lowercase)": {
         "prefix": "vs-dn-l",
         "body": "\\${TM_DIRECTORY/^.+\\/(([a-z]*)(-)?([a-z])?)/\\${2:/lowercase}\\${3:+-}\\${4:/lowercase}/g}"
     },
-    "Snippet: Directory Name (Capitalized)": {
+    "📎 Directory Name (Capitalized)": {
         "prefix": "vs-dn-c",
         "body": "\\${TM_DIRECTORY/^.+\\/(([a-z]*)(-)?([a-z])?)/\\${2:/capitalize}\\${3:+-}\\${4:/capitalize}/g}"
     },
-    "Snippet: Directory Name (Underscores & Lowercase)": {
+    "📎 Directory Name (Underscores & Lowercase)": {
         "prefix": "vs-dn-ul",
         "body": "\\${TM_DIRECTORY/^.+\\/(([a-z]*)(-)?([a-z])?)/\\${2:/lowercase}\\${3:+_}\\${4:/lowercase}/g}"
     },
-    "Snippet: Directory Name (Underscores & Capitalized)": {
+    "📎 Directory Name (Underscores & Capitalized)": {
         "prefix": "vs-dn-uc",
         "body": "\\${TM_DIRECTORY/^.+\\/(([a-z]*)(-)?([a-z])?)/\\${2:/capitalize}\\${3:+_}\\${4:/capitalize}/g}"
     },
-    "Snippet: Directory Name (Spaces & Lowercase)": {
+    "📎 Directory Name (Spaces & Lowercase)": {
         "prefix": "vs-dn-sl",
         "body": "\\${TM_DIRECTORY/^.+\\/(([a-z]*)(-)?([a-z])?)/\\${2:/lowercase}\\${3:+ }\\${4:/lowercase}/g}"
     },
-    "Snippet: Directory Name (Spaces & Capitalized)": {
+    "📎 Directory Name (Spaces & Capitalized)": {
         "prefix": "vs-dn-sc",
         "body": "\\${TM_DIRECTORY/^.+\\/(([a-z]*)(-)?([a-z])?)/\\${2:/capitalize}\\${3:+ }\\${4:/capitalize}/g}"
     },
-    "Snippet: Directory Name (1st Letter)": {
+    "📎 Directory Name (1st Letter)": {
         "prefix": "vs-dn-fl",
         "body": "\\${TM_DIRECTORY/^.+\\/([a-z]).*$/\\${1:/lowercase}/g}"
     },
 
-    "Snippet: Parent Directory Name (Lowercase)": {
+    "📎 Parent Directory Name (Lowercase)": {
         "prefix": "vs-pdn-l",
         "body": "\\${TM_DIRECTORY/^.+\\/(([a-z]*)(-)?([a-z])?)/\\${2:/lowercase}\\${3:+-}\\${4:/lowercase}/g}"
     },
-    "Snippet: Parent Directory Name (Capitalized)": {
+    "📎 Parent Directory Name (Capitalized)": {
         "prefix": "vs-pdn-c",
         "body": "\\${TM_DIRECTORY/^.+\\/(([a-z]*)(-)?([a-z])?)/\\${2:/capitalize}\\${3:+-}\\${4:/capitalize}/g}"
     },
-    "Snippet: Parent Directory Name (1st Letter)": {
+    "📎 Parent Directory Name (1st Letter)": {
         "prefix": "vs-pdn-fl",
         "body": "\\${TM_DIRECTORY/^.+\\/(([a-z]*)(-)?([a-z])?)/\\${2:/lowercase}\\${3:+_}\\${4:/lowercase}/g}"
     },

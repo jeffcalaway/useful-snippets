@@ -1,5 +1,5 @@
 {
-    "Page Setup w/ jQuery": {
+    "📎 Page Setup w/ jQuery": {
         "prefix": "j-set",
         "body": [
             "jQuery($ => {",
@@ -9,7 +9,7 @@
             "});"
         ]
     },
-    "Page Setup w/ jQuery (Deprecated)": {
+    "📎 Page Setup w/ jQuery (Deprecated)": {
         "prefix": "pagejqo",
         "body": [
             "jQuery(document).ready(function($) {",
@@ -19,7 +19,7 @@
             "});"
         ]
     },
-    "Plugin File Setup": {
+    "📎 Plugin File Setup": {
         "prefix": "j-pset",
         "body": [
             "jQuery($ => {",
@@ -77,11 +77,11 @@
             "});"
         ]
     },
-    "Console Log": {
+    "📎 Console Log": {
         "prefix": "_",
         "body": "console.log( $1 );$0"
     },
-    "Each (jQuery)": {
+    "📎 Each (jQuery)": {
         "prefix": "each",
         "body": [
             "$('${1:SELECTOR}').each(function() {",
@@ -89,7 +89,7 @@
             "});"
         ]
     },
-    "If": {
+    "📎 If": {
         "prefix": "if",
         "body": [
             "if ( ${1:CONDITION} ) {",
@@ -97,7 +97,7 @@
             "}"
         ]
     },
-    "If Exists": {
+    "📎 If Exists": {
         "prefix": "exists",
         "body": [
             "if ( $('${1:SELECTOR}')[0] ) {",
@@ -105,7 +105,7 @@
             "}"
         ]
     },
-    "Send Ajax Request": {
+    "📎 Send Ajax Request": {
         "prefix": "j-aj",
         "body": [
             "function ${1:FUNCTION_NAME}() {",

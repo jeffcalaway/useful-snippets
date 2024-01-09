@@ -1,6 +1,6 @@
 {
     // Basic Class
-    "Class: Class": {
+    "📎 Class": {
         "prefix": "class",
         "scope": "html",
         "body": [
@@ -15,7 +15,7 @@
         ]
     },
     // Parent Module Class
-    "Class: Parent Module": {
+    "📎 Parent Module": {
         "prefix": "c-pm",
         "scope": "html",
         "body": [
@@ -44,7 +44,7 @@
         ]
     },
     // Submodule Class
-    "Class: Submodule": {
+    "📎 Submodule": {
         "prefix": "c-sm",
         "scope": "html",
         "body": [
@@ -61,34 +61,34 @@
             "}",
         ]
     },
-    "Class: Register Module": {
+    "📎 Register Module": {
         "prefix": "c-rm",
         "scope": "php",
         "body": "\\$this->${1:MODULE_SLUG} = new ${TM_FILENAME_BASE/((^class-)([a-z]*)(-)?([a-z])?)/${3:/capitalize}${4:+_}${5:/capitalize}/g}\\\\${2:MODULE_CLASS}();"
     },
     // Hooks
-    "Class: Add Action": {
+    "📎 Add Action": {
         "prefix": "c-aa",
         "scope": "php",
         "body": "\\$this->add_action( '${1:HOOK_NAME}', '${2:FUNCTION_NAME}', ${3:10} );$0"
     },
-    "Class: Remove Action": {
+    "📎 Remove Action": {
         "prefix": "c-ra",
         "scope": "php",
         "body": "\\$this->remove_action( '${1:HOOK_NAME}', '${2:FUNCTION_NAME}' );$0"
     },
-    "Class: Add Filter": {
+    "📎 Add Filter": {
         "prefix": "c-afi",
         "scope": "php",
         "body": "\\$this->add_filter( '${1:HOOK_NAME}', '${2:FUNCTION_NAME}', ${3:10} );$0"
     },
-    "Class: Remove Filter": {
+    "📎 Remove Filter": {
         "prefix": "c-rfi",
         "scope": "php",
         "body": "\\$this->remove_filter( '${1:HOOK_NAME}', '${2:FUNCTION_NAME}' );$0"
     },
     // Function
-    "Class: Public Function": {
+    "📎 Public Function": {
         "prefix": "c-pf",
         "scope": "php",
         "body": [
@@ -97,7 +97,7 @@
             "}"
         ]
     },
-    "Class: Private Function": {
+    "📎 Private Function": {
         "prefix": "c-prf",
         "scope": "php",
         "body": [

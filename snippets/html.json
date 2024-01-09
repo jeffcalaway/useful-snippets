@@ -1,5 +1,5 @@
 {
-    "Page Setup": {
+    "📎 Page Setup": {
         "prefix": "h-set",
         "body": [
             "<!DOCTYPE html>",
@@ -18,11 +18,11 @@
             "</html>$0"
         ]
     },
-    "Copyright Entity": {
+    "📎 Copyright Entity": {
         "prefix": "copy",
         "body": "&copy;"
     },
-    "Inline Background Image": {
+    "📎 Inline Background Image": {
         "prefix": "bgimg",
         "body": "style=\"background-image: url('${1:IMAGE_PATH}')\"$0"
     }

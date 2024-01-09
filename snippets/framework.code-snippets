@@ -1,5 +1,5 @@
 {
-    "Includes: Module Class": {
+    "📎 Module Class": {
         "prefix": "inc-mc",
         "scope": "html",
         "body": [
@@ -25,7 +25,7 @@
             "}",
         ]
     },
-    "Includes: Parent Class": {
+    "📎 Parent Class": {
         "prefix": "inc-pc",
         "scope": "html",
         "body": [
@@ -53,7 +53,7 @@
             "}",
         ]
     },
-    "Includes: Post Type Registration": {
+    "📎 Post Type Registration": {
         "prefix": "inc-pr",
         "scope": "html",
         "body": [
@@ -133,7 +133,7 @@
             "}$0",
         ]
     },
-    "Includes: Post Type Interface": {
+    "📎 Post Type Interface": {
         "prefix": "inc-pi",
         "scope": "html",
         "body": [
@@ -198,7 +198,7 @@
             "}$0"
         ]
     },
-    "Includes: Post Type Functions": {
+    "📎 Post Type Functions": {
         "prefix": "inc-pfs",
         "scope": "html",
         "body": [
@@ -406,7 +406,7 @@
             "}$0",
         ]
     },
-    "Includes: Function": {
+    "📎 Function": {
         "prefix": "inc-f",
         "scope": "php",
         "body": [
@@ -424,7 +424,7 @@
             "function ${1:function_name}() {$0}"
         ]
     },
-    "Includes: Clipboard Function": {
+    "📎 Clipboard Function": {
         "prefix": "inc-cf",
         "scope": "php",
         "body": [
@@ -442,7 +442,7 @@
             "function ${CLIPBOARD/(([a-z]+)(-)?)/${2:/lowercase}${3:+_}/g}() {$0}"
         ]
     },
-    "Includes: Post Function": {
+    "📎 Post Function": {
         "prefix": "inc-pf",
         "scope": "php",
         "body": [
@@ -466,7 +466,7 @@
             "}$0",
         ]
     },
-    "Includes: Clipboard Post Function": {
+    "📎 Clipboard Post Function": {
         "prefix": "inc-cpf",
         "scope": "php",
         "body": [
@@ -490,7 +490,7 @@
             "}$0",
         ]
     },
-    "Includes: Taxonomy Function": {
+    "📎 Taxonomy Function": {
         "prefix": "inc-tf",
         "scope": "php",
         "body": [
@@ -514,35 +514,35 @@
             "}$0",
         ]
     },
-    "Includes: File Name": {
+    "📎 File Name": {
         "prefix": "inc-fn",
         "scope": "php",
         "body": [
             "${TM_FILENAME_BASE/(^class-)([a-z]*$)?/${2:/lowercase}/g}"
         ]
     },
-    "Includes: Directory Name": {
+    "📎 Directory Name": {
         "prefix": "inc-dn",
         "scope": "php",
         "body": [
             "${TM_DIRECTORY/^.+\\/(.*)$/${1:/lowercase}/g}"
         ]
     },
-    "Includes: File Name (Capitalized)": {
+    "📎 File Name (Capitalized)": {
         "prefix": "inc-fnc",
         "scope": "php",
         "body": [
             "${TM_FILENAME_BASE/(^class-)([a-z]*$)?/${2:/capitalize}/g}"
         ]
     },
-    "Includes: Directory Name (Capitalized)": {
+    "📎 Directory Name (Capitalized)": {
         "prefix": "inc-dnc",
         "scope": "php",
         "body": [
             "${TM_DIRECTORY/^.+\\/(.*)$/${1:/capitalize}/g}"
         ]
     },
-    "Includes: Taxonomy Registration": {
+    "📎 Taxonomy Registration": {
         "prefix": "inc-tr",
         "scope": "html",
         "body": [
@@ -615,7 +615,7 @@
             "}$0"
         ]
     },
-    "Includes: Taxonomy Interface": {
+    "📎 Taxonomy Interface": {
         "prefix": "inc-ti",
         "scope": "html",
         "body": [
@@ -690,7 +690,7 @@
             "}$0"
         ]
     },
-    "Includes: Taxonomy Functions": {
+    "📎 Taxonomy Functions": {
         "prefix": "inc-tfs",
         "scope": "html",
         "body": [
@@ -850,7 +850,7 @@
             "}$0",
         ]
     },
-    "Includes: Template Data": {
+    "📎 Template Data": {
         "prefix": "inc-td",
         "scope": "html",
         "body": [
@@ -876,7 +876,7 @@
             "}"
         ]
     },
-    "Includes: Template Blocks": {
+    "📎 Template Blocks": {
         "prefix": "inc-tb",
         "scope": "html",
         "body": [
@@ -902,7 +902,7 @@
             "}"
         ]
     },
-    "Includes: Function - Set Global": {
+    "📎 Function - Set Global": {
         "prefix": "inc-sg",
         "scope": "php",
         "body": [
@@ -913,7 +913,7 @@
             "}"
         ]
     },
-    "Includes: Function - Handle Data (Singular)": {
+    "📎 Function - Handle Data (Singular)": {
         "prefix": "inc-phd",
         "scope": "php",
         "body": [
@@ -936,7 +936,7 @@
             "}$0",
         ]
     },
-    "Includes: Function - Handle Data (Plural)": {
+    "📎 Function - Handle Data (Plural)": {
         "prefix": "inc-phds",
         "scope": "php",
         "body": [

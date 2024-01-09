@@ -1,11 +1,11 @@
 {
     // PHP Tags
-    "PHP: Tags (Inline)": {
+    "📎 Tags (Inline)": {
         "prefix": "php",
         "scope": "html",
         "body": "<?php $1 ?>$0"
     },
-    "PHP: Tags (Expanded)": {
+    "📎 Tags (Expanded)": {
         "prefix": "phpp",
         "scope": "html",
         "body": [
@@ -16,7 +16,7 @@
     },
 
     // If Statement
-    "PHP: If (HTML)": {
+    "📎 If (HTML)": {
         "prefix": "if",
         "scope": "html",
         "body": [
@@ -25,7 +25,7 @@
             "<?php endif; ?>$0"
         ]
     },
-    "PHP: If (PHP)": {
+    "📎 If (PHP)": {
         "prefix": "if",
         "scope": "php",
         "body": [
@@ -34,7 +34,7 @@
             "}$0"
         ]
     },
-    "PHP: Else (HTML)": {
+    "📎 Else (HTML)": {
         "prefix": "else",
         "scope": "html",
         "body": [
@@ -42,7 +42,7 @@
             "\t$0"
         ]
     },
-    "PHP: Else (PHP)": {
+    "📎 Else (PHP)": {
         "prefix": "else",
         "scope": "php",
         "body": [
@@ -51,7 +51,7 @@
             "}$0"
         ]
     },
-    "PHP: Else If (HTML)": {
+    "📎 Else If (HTML)": {
         "prefix": "elseif",
         "scope": "html",
         "body": [
@@ -59,7 +59,7 @@
             "\t$0"
         ]
     },
-    "PHP: Else If (PHP)": {
+    "📎 Else If (PHP)": {
         "prefix": "elseif",
         "scope": "php",
         "body": [
@@ -70,7 +70,7 @@
     },
 
     // For Loop
-    "PHP: For (HTML)": {
+    "📎 For (HTML)": {
         "prefix": "for",
         "scope": "html",
         "body": [
@@ -79,7 +79,7 @@
             "<?php endfor; ?>$0"
         ]
     },
-    "PHP: For (PHP)": {
+    "📎 For (PHP)": {
         "prefix": "for",
         "scope": "php",
         "body": [
@@ -90,7 +90,7 @@
     },
 
     // For Each Loop
-    "PHP: For Each (HTML)": {
+    "📎 For Each (HTML)": {
         "prefix": "foreach",
         "scope": "html",
         "body": [
@@ -99,7 +99,7 @@
             "<?php endforeach; ?>$0"
         ]
     },
-    "PHP: For Each (PHP)": {
+    "📎 For Each (PHP)": {
         "prefix": "foreach",
         "scope": "php",
         "body": [
@@ -110,14 +110,14 @@
     },
 
     // Conditional End
-    "PHP: End": {
+    "📎 End": {
         "prefix": "end",
         "scope": "html",
         "body": "<?php end${1|if,for,foreach,while|}; ?>$0"
     },
 
     // Class Setup
-    "PHP: Class (PHP)": {
+    "📎 Class (PHP)": {
         "prefix": "class",
         "scope": "php",
         "body": [
@@ -131,19 +131,19 @@
     },
 
     // Year
-    "PHP: Year (HTML)": {
+    "📎 Year (HTML)": {
         "prefix": "year",
         "scope": "html",
         "body": "<?php echo date('Y'); ?>$0"
     },
-    "PHP: Year (PHP)": {
+    "📎 Year (PHP)": {
         "prefix": "year",
         "scope": "html",
         "body": "date('Y')"
     },
 
     // ob_start
-    "PHP: ob_start (HTML)": {
+    "📎 ob_start (HTML)": {
         "prefix": "ob",
         "scope": "html",
         "body": [
@@ -154,7 +154,7 @@
             "?>"
         ]
     },
-    "PHP: ob_start (PHP)": {
+    "📎 ob_start (PHP)": {
         "prefix": "ob",
         "scope": "php",
         "body": [
@@ -165,7 +165,16 @@
     },
 
     // Array Fill
-    "PHP: Array Fill (3)": {
+    "📎 Array Fill (2)": {
+        "prefix": "af2",
+        "scope": "php",
+        "body": [
+            "array_fill(0,2,["
+            "\t$0"
+            "])"
+        ]
+    },
+    "📎 Array Fill (3)": {
         "prefix": "af3",
         "scope": "php",
         "body": [
@@ -174,7 +183,7 @@
             "])"
         ]
     },
-    "PHP: Array Fill (4)": {
+    "📎 Array Fill (4)": {
         "prefix": "af4",
         "scope": "php",
         "body": [
@@ -183,7 +192,7 @@
             "])"
         ]
     },
-    "PHP: Array Fill (5)": {
+    "📎 Array Fill (5)": {
         "prefix": "af5",
         "scope": "php",
         "body": [
@@ -192,7 +201,7 @@
             "])"
         ]
     },
-    "PHP: Array Fill (6)": {
+    "📎 Array Fill (6)": {
         "prefix": "af6",
         "scope": "php",
         "body": [
@@ -201,13 +210,38 @@
             "])"
         ]
     },
-    "PHP: Array Fill (8)": {
+    "📎 Array Fill (8)": {
         "prefix": "af8",
         "scope": "php",
         "body": [
             "array_fill(0,8,["
             "\t$0"
             "])"
+        ]
+    },
+    // Array Map
+    "📎 Array Map (HTML)": {
+        "prefix": "ad-m",
+        "scope": "html",
+        "body": [
+            "<?php",
+            "\t\\$items = array_map(function(\\$item){",
+            "\t\treturn [",
+            "\t\t\t$0",
+            "\t\t];",
+            "\t}, \\$items);",
+            "?>"
+        ]
+    },
+    "📎 Array Map (PHP)": {
+        "prefix": "ad-m",
+        "scope": "php",
+        "body": [
+            "\\$items = array_map(function(\\$item){",
+            "\treturn [",
+            "\t\t$0",
+            "\t];",
+            "}, \\$items);",
         ]
     },
 }

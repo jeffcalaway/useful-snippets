@@ -1,90 +1,90 @@
 {
     // Get Field
-    "ACF: Field (HTML)": {
+    "📎 Field (HTML)": {
         "prefix": "a-gf",
         "scope": "html",
         "body": "<?php get_field( '$1' ); ?>$0"
     },
-    "ACF: Field (PHP)": {
+    "📎 Field (PHP)": {
         "prefix": "a-gf",
         "scope": "php",
         "body": "get_field( '$1' )$0"
     },
-    "ACF: Field (HTML) (Deprecated)": {
+    "📎 Field (HTML) (Deprecated)": {
         "prefix": "gf",
         "scope": "html",
         "body": "<?php get_field( '$1' ); ?>$0"
     },
-    "ACF: Field (PHP) (Deprecated)": {
+    "📎 Field (PHP) (Deprecated)": {
         "prefix": "gf",
         "scope": "php",
         "body": "get_field( '$1' )$0"
     },
     // Get Sub Field
-    "ACF: Sub Field (HTML)": {
+    "📎 Sub Field (HTML)": {
         "prefix": "a-gsf",
         "scope": "html",
         "body": "<?php get_sub_field( '$1' ); ?>$0"
     },
-    "ACF: Sub Field (PHP)": {
+    "📎 Sub Field (PHP)": {
         "prefix": "a-gsf",
         "scope": "php",
         "body": "get_sub_field( '$1' )$0"
     },
-    "ACF: Sub Field (HTML) (Deprecated)": {
+    "📎 Sub Field (HTML) (Deprecated)": {
         "prefix": "gsf",
         "scope": "html",
         "body": "<?php get_sub_field( '$1' ); ?>$0"
     },
-    "ACF: Sub Field (PHP) (Deprecated)": {
+    "📎 Sub Field (PHP) (Deprecated)": {
         "prefix": "gsf",
         "scope": "php",
         "body": "get_sub_field( '$1' )$0"
     },
     // Get Field Option
-    "ACF: Option Field (HTML)": {
+    "📎 Option Field (HTML)": {
         "prefix": "a-gfo",
         "scope": "html",
         "body": "<?php get_field( '$1', '${2:option}' ); ?>$0"
     },
-    "ACF: Option Field (PHP)": {
+    "📎 Option Field (PHP)": {
         "prefix": "a-gfo",
         "scope": "php",
         "body": "get_field( '$1', '${2:option}' )$0"
     },
-    "ACF: Option Field (HTML) (Deprecated)": {
+    "📎 Option Field (HTML) (Deprecated)": {
         "prefix": "gfo",
         "scope": "html",
         "body": "<?php get_field( '$1', '${2:option}' ); ?>$0"
     },
-    "ACF: Option Field (PHP) (Deprecated)": {
+    "📎 Option Field (PHP) (Deprecated)": {
         "prefix": "gfo",
         "scope": "php",
         "body": "get_field( '$1', '${2:option}' )$0"
     },
     // Get Taxonomy Field
-    "ACF: Taxonomy Field (HTML)": {
+    "📎 Taxonomy Field (HTML)": {
         "prefix": "a-gft",
         "scope": "html",
         "body": "<?php get_field( '$1', '${2:SLUG}_' . ${3:ID} ); ?>$0"
     },
-    "ACF: Taxonomy Field (PHP)": {
+    "📎 Taxonomy Field (PHP)": {
         "prefix": "a-gft",
         "scope": "php",
         "body": "get_field( '$1', '${2:SLUG}_' . ${3:ID} )$0"
     },
-    "ACF: Taxonomy Field (HTML) (Deprecated)": {
+    "📎 Taxonomy Field (HTML) (Deprecated)": {
         "prefix": "gft",
         "scope": "html",
         "body": "<?php get_field( '$1', '${2:SLUG}_' . ${3:ID} ); ?>$0"
     },
-    "ACF: Taxonomy Field (PHP) (Deprecated)": {
+    "📎 Taxonomy Field (PHP) (Deprecated)": {
         "prefix": "gft",
         "scope": "php",
         "body": "get_field( '$1', '${2:SLUG}_' . ${3:ID} )$0"
     },
     // Repeater
-    "ACF: Repeater (HTML)": {
+    "📎 Repeater (HTML)": {
         "prefix": "a-rep",
         "scope": "html",
         "body": [
@@ -95,7 +95,7 @@
             "<?php endif; ?>$0"
         ]
     },
-    "ACF: Repeater (PHP)": {
+    "📎 Repeater (PHP)": {
         "prefix": "a-rep",
         "scope": "php",
         "body": [
@@ -106,7 +106,7 @@
             "}$0"
         ]
     },
-    "ACF: Repeater (HTML) (Deprecated)": {
+    "📎 Repeater (HTML) (Deprecated)": {
         "prefix": "repeater",
         "scope": "html",
         "body": [
@@ -117,7 +117,7 @@
             "<?php endif; ?>$0"
         ]
     },
-    "ACF: Repeater (PHP) (Deprecated)": {
+    "📎 Repeater (PHP) (Deprecated)": {
         "prefix": "repeater",
         "scope": "php",
         "body": [
@@ -129,7 +129,7 @@
         ]
     },
     // Flex
-    "ACF: Flex (HTML)": {
+    "📎 Flex (HTML)": {
         "prefix": "a-flex",
         "scope": "html",
         "body": [
@@ -140,7 +140,7 @@
             "<?php endif; ?>$0"
         ]
     },
-    "ACF: Flex (PHP)": {
+    "📎 Flex (PHP)": {
         "prefix": "a-flex",
         "scope": "php",
         "body": [
@@ -151,7 +151,7 @@
             "}$0"
         ]
     },
-    "ACF: Flex (HTML) (Deprecated)": {
+    "📎 Flex (HTML) (Deprecated)": {
         "prefix": "flex",
         "scope": "html",
         "body": [
@@ -162,7 +162,7 @@
             "<?php endif; ?>$0"
         ]
     },
-    "ACF: Flex (PHP) (Deprecated)": {
+    "📎 Flex (PHP) (Deprecated)": {
         "prefix": "flex",
         "scope": "php",
         "body": [
@@ -174,7 +174,7 @@
         ]
     },
     // Add Options Page
-    "ACF: Options Page": {
+    "📎 Options Page": {
         "prefix": "a-op",
         "scope": "php",
         "body": [
@@ -190,7 +190,7 @@
             "}$0"
         ]
     },
-    "ACF: Sub Options Page": {
+    "📎 Sub Options Page": {
         "prefix": "a-sop",
         "scope": "php",
         "body": [

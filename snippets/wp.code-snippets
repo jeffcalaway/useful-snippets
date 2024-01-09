@@ -1,17 +1,17 @@
 {
     // Debug Log
-    "WP: Debug Log (HTML)": {
+    "📎 Debug Log (HTML)": {
         "prefix": "_",
         "scope": "html",
         "body": "<?php _log( $1 ); ?>$0"
     },
-    "WP: Debug Log (PHP)": {
+    "📎 Debug Log (PHP)": {
         "prefix": "_",
         "scope": "php",
         "body": "_log( $1 );$0"
     },
     // Page Setup
-    "WP: Page Setup": {
+    "📎 Page Setup": {
         "prefix": "wp-set",
         "scope": "html",
         "body": [
@@ -30,29 +30,29 @@
         ]
     },
     // Header
-    "WP: Header (HTML)": {
+    "📎 Header (HTML)": {
         "prefix": "wp-h",
         "scope": "html",
         "body": "<?php get_header(); ?>$0"
     },
-    "WP: Header (PHP)": {
+    "📎 Header (PHP)": {
         "prefix": "wp-h",
         "scope": "php",
         "body": "get_header();$0"
     },
     // Footer
-    "WP: Footer (HTML)": {
+    "📎 Footer (HTML)": {
         "prefix": "wp-f",
         "scope": "html",
         "body": "<?php get_footer(); ?>$0"
     },
-    "WP: Footer (PHP)": {
+    "📎 Footer (PHP)": {
         "prefix": "wp-f",
         "scope": "php",
         "body": "get_footer();$0"
     },
     // WP Query
-    "WP: Query (HTML)": {
+    "📎 Query (HTML)": {
         "prefix": "wp-q",
         "scope": "html",
         "body": [
@@ -81,7 +81,7 @@
             "<?php wp_reset_postdata(); ?>$0"
         ]
     },
-    "WP: Query (PHP)": {
+    "📎 Query (PHP)": {
         "prefix": "wp-q",
         "scope": "php",
         "body": [
@@ -109,7 +109,7 @@
         ]
     },
     // WP Query: Tax Query
-    "WP: Query[Tax] (HTML)": {
+    "📎 Query[Tax] (HTML)": {
         "prefix": "wp-tq",
         "scope": "html",
         "body": [
@@ -122,7 +122,7 @@
             "?>$0"
         ]
     },
-    "WP: Query[Tax] (PHP)": {
+    "📎 Query[Tax] (PHP)": {
         "prefix": "wp-tq",
         "scope": "php",
         "body": [
@@ -136,7 +136,7 @@
         ]
     },
     // WP Query: Meta Query
-    "WP: Query[Meta] (HTML)": {
+    "📎 Query[Meta] (HTML)": {
         "prefix": "wp-mq",
         "scope": "html",
         "body": [
@@ -149,7 +149,7 @@
             "?>$0"
         ]
     },
-    "WP: Query[Meta] (PHP)": {
+    "📎 Query[Meta] (PHP)": {
         "prefix": "wp-mq",
         "scope": "php",
         "body": [
@@ -163,7 +163,7 @@
         ]
     },
     // Get Posts
-    "WP: Get Posts (HTML)": {
+    "📎 Get Posts (HTML)": {
         "prefix": "wp-gp",
         "scope": "html",
         "body": [
@@ -178,7 +178,7 @@
             "?>$0"
         ]
     },
-    "WP: Get Posts (PHP)": {
+    "📎 Get Posts (PHP)": {
         "prefix": "wp-gp",
         "scope": "php",
         "body": [
@@ -191,7 +191,7 @@
             "${2:\\$VARIABLE} = get_posts( \\$args );$0"
         ]
     },
-    "WP: Get Posts (HTML) (Deprecated)": {
+    "📎 Get Posts (HTML) (Deprecated)": {
         "prefix": "gp",
         "scope": "html",
         "body": [
@@ -206,7 +206,7 @@
             "?>$0"
         ]
     },
-    "WP: Get Posts (PHP) (Deprecated)": {
+    "📎 Get Posts (PHP) (Deprecated)": {
         "prefix": "gp",
         "scope": "php",
         "body": [
@@ -220,7 +220,7 @@
         ]
     },
     // While Have Posts
-    "WP: While Have Posts (HTML)": {
+    "📎 While Have Posts (HTML)": {
         "prefix": "wp-whp",
         "scope": "html",
         "body": [
@@ -236,7 +236,7 @@
             "<?php wp_reset_postdata(); ?>"
         ]
     },
-    "WP: While Have Posts (PHP)": {
+    "📎 While Have Posts (PHP)": {
         "prefix": "wp-whp",
         "scope": "php",
         "body": [
@@ -250,7 +250,7 @@
             "wp_reset_postdata();"
         ]
     },
-    "WP: While Have Posts (HTML) (Deprecated)": {
+    "📎 While Have Posts (HTML) (Deprecated)": {
         "prefix": "have_posts",
         "scope": "html",
         "body": [
@@ -266,7 +266,7 @@
             "<?php wp_reset_postdata(); ?>"
         ]
     },
-    "WP: While Have Posts (PHP) (Deprecated)": {
+    "📎 While Have Posts (PHP) (Deprecated)": {
         "prefix": "have_posts",
         "scope": "php",
         "body": [
@@ -281,7 +281,7 @@
         ]
     },
     // Nav Menu
-    "WP: Nav Menu (HTML)": {
+    "📎 Nav Menu (HTML)": {
         "prefix": "wp-n",
         "scope": "html",
         "body": [
@@ -296,7 +296,7 @@
             "?>$0"
         ]
     },
-    "WP: Nav Menu (PHP)": {
+    "📎 Nav Menu (PHP)": {
         "prefix": "wp-n",
         "scope": "php",
         "body": [
@@ -310,7 +310,7 @@
         ]
     },
     // Register Post Type
-    "WP: Register Post Type (Deprecated)": {
+    "📎 Register Post Type (Deprecated)": {
         "prefix": "rpt",
         "scope": "php",
         "body": [
@@ -347,7 +347,7 @@
         ]
     },
     // Register Taxonomy
-    "WP: Register Taxonomy (Deprecated)": {
+    "📎 Register Taxonomy (Deprecated)": {
         "prefix": "rt",
         "scope": "php",
         "body": [
@@ -375,23 +375,23 @@
         ]
     },
     // Featured Image
-    "WP: Featured Image": {
+    "📎 Featured Image": {
         "prefix": "wp-fi",
         "scope": "php",
         "body": "get_the_post_thumbnail_url( ${1:POST}, '${2:large}' )$0"
     },
-    "WP: Featured Image (Deprecated)": {
+    "📎 Featured Image (Deprecated)": {
         "prefix": "fi",
         "scope": "php",
         "body": "get_the_post_thumbnail_url( ${1:POST}, '${2:large}' )$0"
     },
     // Enqueue File
-    "WP: Enqueue File": {
+    "📎 Enqueue File": {
         "prefix": "wp-enq",
         "scope": "php",
         "body": "wp_enqueue_${1|script,style|}( '${2:NAME}', get_template_directory_uri() . '/assets/${3:PATH}', ${4|[],['jquery']|}, get_theme_version()${5| ,\\, true |});$0"
     },
-    "WP: Localize w/ AJAX": {
+    "📎 Localize w/ AJAX": {
         "prefix": "wp-laj",
         "scope": "php",
         "body": [
@@ -402,7 +402,7 @@
         ]
     },
     // Ajax Request
-    "WP: Ajax Request": {
+    "📎 Ajax Request": {
         "prefix": "wp-ajr",
         "scope": "php",
         "body": [
@@ -422,12 +422,12 @@
         ]
     },
     // Gravity Form
-    "WP: Gravity Form (HTML)": {
+    "📎 Gravity Form (HTML)": {
         "prefix": "wp-gr",
         "scope": "html",
         "body": "<?php gravity_form( ${1:FORM_ID}, false, false, false, null, ${2|true,false|} ); ?>$0"
     },
-    "WP: Gravity Form (PHP)": {
+    "📎 Gravity Form (PHP)": {
         "prefix": "wp-gr",
         "scope": "php",
         "body": "gravity_form( ${1:FORM_ID}, false, false, false, null, ${2|true,false|} );$0"
@@ -455,7 +455,7 @@
         ]
     },
     // wp-config: debug logging
-    "WP: Debug Log Definitions": {
+    "📎 Debug Log Definitions": {
         "prefix": "wp-debug",
         "scope": "php",
         "body": [
@@ -465,7 +465,7 @@
         ]
     },
     // wp-config: Site URL settings
-    "WP: Site URLs": {
+    "📎 Site URLs": {
         "prefix": "wp-urls",
         "scope": "php",
         "body": [

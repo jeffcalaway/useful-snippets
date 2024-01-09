@@ -1,5 +1,5 @@
 {
-    "Stories: Class": {
+    "📎 Class": {
         "prefix": "st-c",
         "scope": "html",
         "body": [
@@ -27,7 +27,7 @@
             "}"
         ]
     },
-    "Stories: Story": {
+    "📎 Story": {
         "prefix": "st-s",
         "scope": "php",
         "body": [
@@ -37,7 +37,7 @@
             "];"
         ]
     },
-    "Stories: Story (Modified)": {
+    "📎 Story (Modified)": {
         "prefix": "st-sm",
         "scope": "php",
         "body": [
@@ -47,12 +47,12 @@
             "];$0"
         ]
     },
-    "Stories: Placeholder Text": {
+    "📎 Placeholder Text": {
         "prefix": "st-pt",
         "scope": "php",
         "body": "us_get_lorem_ipsum()"
     },
-    "Stories: Placeholder Image": {
+    "📎 Placeholder Image": {
         "prefix": "st-pi",
         "scope": "php",
         "body": "us_get_placeholder_image('${1:Width}', '${2:Height}')$0"

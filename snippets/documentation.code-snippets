@@ -1,6 +1,6 @@
 {
     // Directory List
-    "Doc: Directory": {
+    "📎 Directory": {
         "prefix": "d-d",
         "scope": "php,javascript,css,scss",
         "body": [
@@ -13,7 +13,7 @@
             "//≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡"
         ]
     },
-    "Doc: Directory (Deprecated)": {
+    "📎 Directory (Deprecated)": {
         "prefix": "dir",
         "scope": "php,javascript,css,scss",
         "body": [
@@ -27,18 +27,18 @@
         ]
     },
     // Directory List Item
-    "Doc: List Item": {
+    "📎 List Item": {
         "prefix": "d-di",
         "scope": "php,javascript,css,scss",
         "body": "//    ✅${1:SECTION_NAME}"
     },
-    "Doc: List Item (Deprecated)": {
+    "📎 List Item (Deprecated)": {
         "prefix": "isec",
         "scope": "php,javascript,css,scss",
         "body": "//    ✅${1:SECTION_NAME}"
     },
     // Directory Section
-    "Doc: Section": {
+    "📎 Section": {
         "prefix": "d-s",
         "scope": "php,javascript,css,scss",
         "body": [
@@ -47,7 +47,7 @@
             "//≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡"
         ]
     },
-    "Doc: Section (Deprecated)": {
+    "📎 Section (Deprecated)": {
         "prefix": "sec",
         "scope": "php,javascript,css,scss",
         "body": [
@@ -57,7 +57,7 @@
         ]
     },
     // DocBlock
-    "Doc: Block": {
+    "📎 Block": {
         "prefix": "d-ds",
         "scope": "php,javascript,css,scss",
         "body": [
@@ -71,7 +71,7 @@
             " */$0"
         ]
     },
-    "Doc: Block (Deprecated)": {
+    "📎 Block (Deprecated)": {
         "prefix": "doc",
         "scope": "php,javascript,css,scss",
         "body": [
@@ -86,7 +86,7 @@
         ]
     },
     // Direction Subsection
-    "Doc: Subsection": {
+    "📎 Subsection": {
         "prefix": "d-ss",
         "scope": "php,javascript,css,scss",
         "body": [
@@ -95,7 +95,7 @@
             "//=================================================="
         ]
     },
-    "Doc: Subsection (Deprecated)": {
+    "📎 Subsection (Deprecated)": {
         "prefix": "subsec",
         "scope": "php,javascript,css,scss",
         "body": [
