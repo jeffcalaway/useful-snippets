@@ -147,6 +147,16 @@
         "prefix": "ob",
         "scope": "html",
         "body": [
+            "<?php ob_start(); ?>",
+            "\t$0",
+            "<?php $content = ob_get_clean(); ?>"
+        ]
+    },
+    // ob_start
+    "📎 ob_start (HTML -> PHP)": {
+        "prefix": "obp",
+        "scope": "html",
+        "body": [
             "<?php",
             "\tob_start();",
             "\t\t$0",
