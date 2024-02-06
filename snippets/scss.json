@@ -25,7 +25,7 @@
     },
     "📎 Set Behind Mixin": {
         "prefix": "m-sb",
-        "body": "@include set-behind('${1:SELECTOR}');$0"
+        "body": "@include set-behind('${1:&:before}');$0"
     },
     "📎 Margin Auto Mixin": {
         "prefix": "m-ma",
