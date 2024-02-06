@@ -71,17 +71,41 @@
         "prefix": "imp",
         "body": "@import \"${1:PATH}\";$0"
     },
-    "📎 Color Variable": {
-        "prefix": "c",
-        "body": "\\$color-${1:COLOR}$0"
-    },
     "📎 Color CSS Variable": {
-        "prefix": "cc",
+        "prefix": "c",
         "body": "var(--color--${1:COLOR})$0"
+    },
+    "📎 Color Variable": {
+        "prefix": "cc",
+        "body": "\\$color-${1:COLOR}$0"
     },
     "📎 CSS Variable": {
         "prefix": "var",
         "body": "var(--${1:SUBJECT}--${2:VARIABLE})$0"
+    },
+    "📎 Background Color (--bg)": {
+        "prefix": "bg",
+        "body": "background-color: var(--bg--${1:COLOR});$0"
+    },
+    "📎 Background Color (--color)": {
+        "prefix": "bgg",
+        "body": "background-color: var(--color--${1:COLOR});$0"
+    },
+    "📎 Background Color (--var)": {
+        "prefix": "bggg",
+        "body": "background-color: var(--${1:SUBJECT}--${2:VARIABLE});$0"
+    },
+    "📎 Text Color (--text)": {
+        "prefix": "cc",
+        "body": "color: var(--text--${1:COLOR});$0"
+    },
+    "📎 Text Color (--color)": {
+        "prefix": "tcc",
+        "body": "color: var(--color--${2:VARIABLE});$0"
+    },
+    "📎 Text Color (--var)": {
+        "prefix": "tccc",
+        "body": "color: var(--${1:SUBJECT}--${2:VARIABLE});$0"
     },
     "📎 Keyboard Focus": {
         "prefix": "focus",
@@ -106,6 +130,15 @@
     "📎 After Pseudo": {
         "prefix": "after",
         "body": [
+            "&:after {",
+            "\tcontent: '';$0",
+            "}"
+        ]
+    },
+    "📎 Before & After Pseudo": {
+        "prefix": "before-after",
+        "body": [
+            "&:before,",
             "&:after {",
             "\tcontent: '';$0",
             "}"
