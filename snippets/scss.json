@@ -88,23 +88,31 @@
         "body": "background-color: var(--bg--${1:COLOR});$0"
     },
     "📎 Background Color (--color)": {
-        "prefix": "bgg",
+        "prefix": "bgc",
         "body": "background-color: var(--color--${1:COLOR});$0"
     },
+    "📎 Background Color (--theme)": {
+        "prefix": "bgt",
+        "body": "background-color: var(--theme--${1:COLOR});$0"
+    },
     "📎 Background Color (--var)": {
-        "prefix": "bggg",
+        "prefix": "bgv",
         "body": "background-color: var(--${1:SUBJECT}--${2:VARIABLE});$0"
     },
     "📎 Text Color (--text)": {
-        "prefix": "cc",
+        "prefix": "tc",
         "body": "color: var(--text--${1:COLOR});$0"
     },
     "📎 Text Color (--color)": {
         "prefix": "tcc",
         "body": "color: var(--color--${2:VARIABLE});$0"
     },
+    "📎 Text Color (--theme)": {
+        "prefix": "tct",
+        "body": "color: var(--text--${2:VARIABLE});$0"
+    },
     "📎 Text Color (--var)": {
-        "prefix": "tccc",
+        "prefix": "tcv",
         "body": "color: var(--${1:SUBJECT}--${2:VARIABLE});$0"
     },
     "📎 Keyboard Focus": {
