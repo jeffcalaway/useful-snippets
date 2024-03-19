@@ -151,5 +151,16 @@
             "\tcontent: '';$0",
             "}"
         ]
+    },
+    "📎 SVG Stroke & Fill Color": {
+        "prefix": "spfc",
+        "body": [
+            "[stroke^=\"#\"] {",
+            "\tstroke: currentColor;",
+            "}",
+            "[fill^=\"#\"] {",
+            "\tfill: currentColor;",
+            "}"
+        ]
     }
 }
