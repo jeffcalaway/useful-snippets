@@ -1027,4 +1027,11 @@
             "#PORT=5757"
         ]
     },
+    "📎 Clipboard Props to Template Block": {
+        "prefix": "tbp",
+        "scope": "php",
+        "body": [
+            "${CLIPBOARD/('[^']+')/\/${1:/downcase} = get_sub_field( $1 );/g}"
+        ]
+    },
 }
