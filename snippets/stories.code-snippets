@@ -60,12 +60,12 @@
     },
     "📎 Placeholder Text": {
         "prefix": "st-pt",
-        "scope": "php",
-        "body": "us_get_lorem_ipsum()"
+        "scope": "php, javascript, javascriptreact, typescript, typescriptreact, jsx,jsx-attr",
+        "body": "'${1|Lorem ipsum dolor sit amet.,Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat aperiam.,Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto ullam distinctio ipsam maxime dolorum nemo non ipsa error molestias veritatis.,Lorem ipsum dolor sit amet consectetur adipisicing elit. Non cupiditate omnis reprehenderit delectus unde laboriosam veritatis fugiat quisquam dolorem ullam nobis commodi debitis porro. Maxime quia laboriosam harum est ullam.|}'$0"
     },
     "📎 Placeholder Image": {
         "prefix": "st-pi",
-        "scope": "php",
-        "body": "us_get_placeholder_image('${1:Width}', '${2:Height}')$0"
+        "scope": "php, javascript, javascriptreact, typescript, typescriptreact, jsx,jsx-attr",
+        "body": "'https://picsum.photos/${1:Width}/${2:Height}'$0"
     },
 }
