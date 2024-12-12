@@ -205,6 +205,7 @@
 | st-c | Stories Class |
 | st-s | Story |
 | st-sm | Story (Modifier) |
+| st-smc | Story (Modifier - From the clipboard) |
 | st-pt | Placeholder Text Function |
 | st-pi | Placeholder Image Function |
 

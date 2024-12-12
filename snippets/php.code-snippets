@@ -160,7 +160,7 @@
             "<?php",
             "\tob_start();",
             "\t\t$0",
-            "\t\\$content = ob_get_clean();"
+            "\t\\$content = ob_get_clean();",
             "?>"
         ]
     },
@@ -171,62 +171,6 @@
             "ob_start();",
             "\t$0",
             "\\$content = ob_get_clean();"
-        ]
-    },
-
-    // Array Fill
-    "📎 Array Fill (2)": {
-        "prefix": "af2",
-        "scope": "php",
-        "body": [
-            "array_fill(0,2,["
-            "\t$0"
-            "])"
-        ]
-    },
-    "📎 Array Fill (3)": {
-        "prefix": "af3",
-        "scope": "php",
-        "body": [
-            "array_fill(0,3,["
-            "\t$0"
-            "])"
-        ]
-    },
-    "📎 Array Fill (4)": {
-        "prefix": "af4",
-        "scope": "php",
-        "body": [
-            "array_fill(0,4,["
-            "\t$0"
-            "])"
-        ]
-    },
-    "📎 Array Fill (5)": {
-        "prefix": "af5",
-        "scope": "php",
-        "body": [
-            "array_fill(0,5,["
-            "\t$0"
-            "])"
-        ]
-    },
-    "📎 Array Fill (6)": {
-        "prefix": "af6",
-        "scope": "php",
-        "body": [
-            "array_fill(0,6,["
-            "\t$0"
-            "])"
-        ]
-    },
-    "📎 Array Fill (8)": {
-        "prefix": "af8",
-        "scope": "php",
-        "body": [
-            "array_fill(0,8,["
-            "\t$0"
-            "])"
         ]
     },
     // Array Map

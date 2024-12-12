@@ -37,13 +37,23 @@
             "];"
         ]
     },
-    "📎 Story (Modified)": {
+    "📎 Story (Modifier)": {
         "prefix": "st-sm",
         "scope": "php",
         "body": [
-            "\\$${1:${TM_SELECTED_TEXT/(.*)/${1:/downcase}/}} = \\$this->add_story('${2:${TM_SELECTED_TEXT/(.*)/${1:/capitalize}/}}', [\\$this, 'template']);",
+            "\\$${1:${TM_SELECTED_TEXT/(.*)/${1:/downcase}/}} = \\$this->add_story('$2', [\\$this, 'template']);",
             "\\$${1:${TM_SELECTED_TEXT/(.*)/${1:/downcase}/}}->args = [",
-            "\t'is_${1:${TM_SELECTED_TEXT/(.*)/${1:/downcase}/}}' => true",
+            "\t'${3|is,has,can|}_${1:${TM_SELECTED_TEXT/(.*)/${1:/downcase}/}}' => true",
+            "];$0"
+        ]
+    },
+    "📎 Story (Modifier - Clipboard)": {
+        "prefix": "st-smc",
+        "scope": "php",
+        "body": [
+            "\\$${CLIPBOARD/^(?:is_|has_|can_)(.*)$|.*/${1:/downcase}/} = \\$this->add_story('${CLIPBOARD/^(?:is_|has_|can_)(.*)$|.*/${1:/capitalize}/}', [\\$this, 'template']);",
+            "\\$${CLIPBOARD/^(?:is_|has_|can_)(.*)$|.*/${1:/downcase}/}->args = [",
+            "\t'${CLIPBOARD}' => true",
             "];$0"
         ]
     },
