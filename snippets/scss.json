@@ -162,5 +162,65 @@
             "\tfill: currentColor;",
             "}"
         ]
+    },
+    "📎 Flexbox": {
+        "prefix": "fb",
+        "body": [
+            "display: flex;"
+        ]
+    },
+    "📎 Flexbox (w/ Justify-Content)": {
+        "prefix": "fbj",
+        "body": [
+            "display: flex;",
+            "justify-content: center;"
+        ]
+    },
+    "📎 Flexbox (w/ Align-Items)": {
+        "prefix": "fba",
+        "body": [
+            "display: flex;",
+            "align-items: center;"
+        ]
+    },
+    "📎 Flexbox (w/ Justify-Content & Align-Items)": {
+        "prefix": "fbja",
+        "body": [
+            "display: flex;",
+            "justify-content: center;",
+            "align-items: center;"
+        ]
+    },
+    "📎 Flexbox Column": {
+        "prefix": "fbc",
+        "body": [
+            "display: flex;",
+            "flex-direction: column;"
+        ]
+    },
+    "📎 Flexbox Column (w/ Justify-Content)": {
+        "prefix": "fbcj",
+        "body": [
+            "display: flex;",
+            "flex-direction: column;",
+            "justify-content: center;"
+        ]
+    },
+    "📎 Flexbox Column (w/ Align-Items)": {
+        "prefix": "fbca",
+        "body": [
+            "display: flex;",
+            "flex-direction: column;",
+            "align-items: center;"
+        ]
+    },
+    "📎 Flexbox Column (w/ Justify-Content & Align-Items)": {
+        "prefix": "fbcja",
+        "body": [
+            "display: flex;",
+            "flex-direction: column;",
+            "justify-content: center;",
+            "align-items: center;"
+        ]
     }
 }

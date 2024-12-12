@@ -96,26 +96,47 @@
 | Snippet | Description |
 | ------- | ----------|
 | imp | Import |
-| inc | Include |
-| m-break | Breakpoint |
-| m-ff | Font Family |
-| m-fs | Font Size |
-| m-cp | Center Position |
-| m-sb | Set Behind |
-| m-ma | Margin Auto |
-| m-so | Set Overlay |
-| m-cf | Clearfix |
-| m-t | Transition |
-| m-pc | Placeholder Color |
-| m-bc | Background Color |
-| m-gs | Grayscale |
-| m-ar | Aspect Ratio |
-| m-gr | Grid |
-| m-grs | Grid Shift |
-| file | File |
-| class | Class |
+| inc | Include Mixin |
+| m-break | Breakpoint Mixin |
+| m-ff | Font Family Mixin |
+| m-fs | Font Size Mixin |
+| m-cp | Center Position Mixin |
+| m-sb | Set Behind Mixin |
+| m-ma | Margin Auto Mixin |
+| m-so | Set Overlay Mixin |
+| m-cf | Clearfix Mixin |
+| m-t | Transition Mixin |
+| m-pc | Placeholder Color Mixin |
+| m-bc | Background Cover Mixin |
+| m-gs | Grayscale Mixin |
+| m-ar | Aspect Ratio Mixin |
+| m-gr | Flexbox Grid Mixin |
+| m-grs | Flexbox Grid Shift Mixin |
+| c | Color CSS Variable |
+| cc | Color Variable |
+| var | CSS Variable |
+| bg | Background Color (--bg) |
+| bgc | Background Color (--color) |
+| bgt | Background Color (--theme) |
+| bgv | Background Color (--var) |
+| tc | Text Color (--text) |
+| tcc | Text Color (--color) |
+| tct | Text Color (--theme) |
+| tcv | Text Color (--var) |
+| focus | Keyboard Focus |
+| class | Parent Class |
 | before | Before Pseudo |
 | after | After Pseudo |
+| before-after | Before & After Pseudo |
+| svgc | SVG Stroke & Fill Color |
+| fb | Flexbox |
+| fbj | Flexbox (w/ Justify-Content) |
+| fba | Flexbox (w/ Align-Items) |
+| fbja | Flexbox (w/ Justify-Content & Align-Items) |
+| fbc | Flexbox Column |
+| fbcj | Flexbox Column (w/ Justify-Content) |
+| fbca | Flexbox Column (w/ Align-Items) |
+| fbcja | Flexbox Column (w/ Justify-Content & Align-Items) |
 
 # "Documentation" Snippets
 
