@@ -164,27 +164,27 @@
         ]
     },
     "📎 Flexbox": {
-        "prefix": "fb",
+        "prefix": "fl",
         "body": [
             "display: flex;"
         ]
     },
     "📎 Flexbox (w/ Justify-Content)": {
-        "prefix": "fbj",
+        "prefix": "flj",
         "body": [
             "display: flex;",
             "justify-content: center;"
         ]
     },
     "📎 Flexbox (w/ Align-Items)": {
-        "prefix": "fba",
+        "prefix": "fla",
         "body": [
             "display: flex;",
             "align-items: center;"
         ]
     },
     "📎 Flexbox (w/ Justify-Content & Align-Items)": {
-        "prefix": "fbja",
+        "prefix": "flja",
         "body": [
             "display: flex;",
             "justify-content: center;",
@@ -192,14 +192,14 @@
         ]
     },
     "📎 Flexbox Column": {
-        "prefix": "fbc",
+        "prefix": "flc",
         "body": [
             "display: flex;",
             "flex-direction: column;"
         ]
     },
     "📎 Flexbox Column (w/ Justify-Content)": {
-        "prefix": "fbcj",
+        "prefix": "flcj",
         "body": [
             "display: flex;",
             "flex-direction: column;",
@@ -207,7 +207,7 @@
         ]
     },
     "📎 Flexbox Column (w/ Align-Items)": {
-        "prefix": "fbca",
+        "prefix": "flca",
         "body": [
             "display: flex;",
             "flex-direction: column;",
@@ -215,7 +215,7 @@
         ]
     },
     "📎 Flexbox Column (w/ Justify-Content & Align-Items)": {
-        "prefix": "fbcja",
+        "prefix": "flcja",
         "body": [
             "display: flex;",
             "flex-direction: column;",

@@ -129,14 +129,14 @@
 | after | After Pseudo |
 | before-after | Before & After Pseudo |
 | svgc | SVG Stroke & Fill Color |
-| fb | Flexbox |
-| fbj | Flexbox (w/ Justify-Content) |
-| fba | Flexbox (w/ Align-Items) |
-| fbja | Flexbox (w/ Justify-Content & Align-Items) |
-| fbc | Flexbox Column |
-| fbcj | Flexbox Column (w/ Justify-Content) |
-| fbca | Flexbox Column (w/ Align-Items) |
-| fbcja | Flexbox Column (w/ Justify-Content & Align-Items) |
+| fl | Flexbox |
+| flj | Flexbox (w/ Justify-Content) |
+| fla | Flexbox (w/ Align-Items) |
+| flja | Flexbox (w/ Justify-Content & Align-Items) |
+| flc | Flexbox Column |
+| flcj | Flexbox Column (w/ Justify-Content) |
+| flca | Flexbox Column (w/ Align-Items) |
+| flcja | Flexbox Column (w/ Justify-Content & Align-Items) |
 
 # "Documentation" Snippets
 
