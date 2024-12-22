@@ -165,7 +165,7 @@
         ]
     },
     "📎 ob_start (PHP)": {
-        "prefix": "ob",
+        "prefix": "obp",
         "scope": "php",
         "body": [
             "ob_start();",
