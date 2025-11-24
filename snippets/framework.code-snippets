@@ -1034,4 +1034,34 @@
             "${CLIPBOARD/('[^']+')/\/${1:/downcase} = get_sub_field( $1 );/g}"
         ]
     },
+    "📎 Block Field (HTML)": {
+        "prefix": "gbf",
+        "scope": "html",
+        "body": "<?php get_block_field( '$1', \\$block ); ?>$0"
+    },
+    "📎 Block Field (PHP)": {
+        "prefix": "gbf",
+        "scope": "php",
+        "body": "get_block_field( '$1', \\$block )$0"
+    },
+    "📎 Block ID (HTML)": {
+        "prefix": "gbid",
+        "scope": "html",
+        "body": "<?php get_block_id( '$1', \\$block ); ?>$0"
+    },
+    "📎 Block ID (PHP)": {
+        "prefix": "gbid",
+        "scope": "php",
+        "body": "get_block_id( '$1', \\$block )$0"
+    },
+    "📎 Block Class (HTML)": {
+        "prefix": "gbc",
+        "scope": "html",
+        "body": "<?php get_block_class( '$1', \\$block ); ?>$0"
+    },
+    "📎 Block Class (PHP)": {
+        "prefix": "gbc",
+        "scope": "php",
+        "body": "get_block_class( '$1', \\$block )$0"
+    },
 }

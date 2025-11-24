@@ -11,6 +11,14 @@
             "}"
         ]
     },
+    "📎 Breakpoint Between Mixin": {
+        "prefix": "m-bb",
+        "body": [
+            "@include break-between(${1|small-phone,average-phone,large-phone,phablet,tablet-portrait,tablet-midpoint,tablet-landscape,laptop,desktop|}, ${2|desktop,laptop,tablet-landscape,tablet-midpoint,tablet-portrait,phablet,large-phone,average-phone,small-phone|}) {",
+            "\t$0",
+            "}"
+        ]
+    },
     "📎 Font Family Mixin": {
         "prefix": "m-ff",
         "body": "@include font-family($1);$0"
@@ -67,53 +75,73 @@
         "prefix": "m-grs",
         "body": "@include grid-shift(${1:COLUMN_COUNT}, ${2:COLUMN_GAP});$0"
     },
+    "📎 Use Project Mixins": {
+        "prefix": "u-sm",
+        "body": "@use '@styles/setup/utilities/mixins' as *;"
+    },
+    "📎 Use Mixins": {
+        "prefix": "u-m",
+        "body": "@use '@styles/utilities/mixins/${1:FOLDER_NAME}' as *;$0"
+    },
+    "📎 Use Font Mixins": {
+        "prefix": "u-mf",
+        "body": "@use '@styles/utilities/mixins/font' as *;$0"
+    },
+    "📎 Use Transition Mixin": {
+        "prefix": "u-mt",
+        "body": "@use '@styles/utilities/mixins/animation/transition' as *;$0"
+    },
     "📎 Import File": {
         "prefix": "imp",
         "body": "@import \"${1:PATH}\";$0"
     },
-    "📎 Color CSS Variable": {
-        "prefix": "c",
-        "body": "var(--color--${1:COLOR})$0"
-    },
-    "📎 Color Variable": {
-        "prefix": "cc",
-        "body": "\\$color-${1:COLOR}$0"
-    },
     "📎 CSS Variable": {
         "prefix": "var",
-        "body": "var(--${1:SUBJECT}--${2:VARIABLE})$0"
+        "body": "var(--${1:NAMESPACE}-${2:PROPERTY})$0"
     },
-    "📎 Background Color (--bg)": {
+    "📎 CSS Variable (w/ Modifier)": {
+        "prefix": "varm",
+        "body": "var(--${1:NAMESPACE}-${2:PROPERTY}--${3:MODIFIER})$0"
+    },
+    "📎 Color CSS Variable": {
+        "prefix": "c",
+        "body": "var(--${1:COLOR}-color)$0"
+    },
+    "📎 Color CSS Variable (w/ Modifier)": {
+        "prefix": "cm",
+        "body": "var(--${1:COLOR}-color--${2:MODIFIER})$0"
+    },
+    "📎 Background Color (--bg-color)": {
         "prefix": "bg",
-        "body": "background-color: var(--bg--${1:COLOR});$0"
+        "body": "background-color: var(--bg-color--${1:MODIFIER});$0"
     },
-    "📎 Background Color (--color)": {
+    "📎 Background Color (--{name}-color)": {
         "prefix": "bgc",
-        "body": "background-color: var(--color--${1:COLOR});$0"
-    },
-    "📎 Background Color (--theme)": {
-        "prefix": "bgt",
-        "body": "background-color: var(--theme--${1:COLOR});$0"
+        "body": "background-color: var(--${1:COLOR}-color);$0"
     },
     "📎 Background Color (--var)": {
         "prefix": "bgv",
-        "body": "background-color: var(--${1:SUBJECT}--${2:VARIABLE});$0"
+        "body": "background-color: var(--${1:VAR});$0"
     },
-    "📎 Text Color (--text)": {
+    "📎 Text Color (--text-color)": {
         "prefix": "tc",
-        "body": "color: var(--text--${1:COLOR});$0"
+        "body": "color: var(--text-color--${1:MODIFIER});$0"
     },
-    "📎 Text Color (--color)": {
+    "📎 Text Color (--{name}-color)": {
         "prefix": "tcc",
-        "body": "color: var(--color--${2:VARIABLE});$0"
-    },
-    "📎 Text Color (--theme)": {
-        "prefix": "tct",
-        "body": "color: var(--text--${2:VARIABLE});$0"
+        "body": "color: var(--${1:COLOR}-color);$0"
     },
     "📎 Text Color (--var)": {
         "prefix": "tcv",
-        "body": "color: var(--${1:SUBJECT}--${2:VARIABLE});$0"
+        "body": "color: var(--${1:VAR});$0"
+    },
+    "📎 Theme Color (--{theme}-color)": {
+        "prefix": "thc",
+        "body": "color: var(--${1:|primary,secondary,tertiary|}-color);$0"
+    },
+    "📎 Theme Color (--{theme}-color--{modifier})": {
+        "prefix": "thcm",
+        "body": "color: var(--${1:|primary,secondary,tertiary|}-color--${2:MODIFIER});$0"
     },
     "📎 Keyboard Focus": {
         "prefix": "focus",
@@ -127,6 +155,10 @@
         "prefix": "class",
         "body": ".${RELATIVE_FILEPATH/.*\\\/(([a-z])[^\\\/]+)\\\/[^\\\/]+\\\/[^\\\/]+\\.scss$/$2/}-${TM_FILENAME_BASE/(^[a-z]*)?/${1:/lowercase}/g}"
     },
+    "📎 Parent Class (Camel-Case)": {
+        "prefix": "cclass",
+        "body": ".${RELATIVE_FILEPATH/.*\\\/(([a-z])[^\\\/]+)\\\/[^\\\/]+\\\/[^\\\/]+\\.scss$/$2/}${TM_FILENAME_BASE/([A-Z])([a-z]+)/-${1:/downcase}${2:/downcase}/g}"
+    },
     "📎 Before Pseudo": {
         "prefix": "before",
         "body": [
@@ -135,11 +167,27 @@
             "}"
         ]
     },
+    "📎 Before Pseudo (w/o Content)": {
+        "prefix": "beforee",
+        "body": [
+            "&:before {",
+            "\t$0",
+            "}"
+        ]
+    },
     "📎 After Pseudo": {
         "prefix": "after",
         "body": [
             "&:after {",
             "\tcontent: '';$0",
+            "}"
+        ]
+    },
+    "📎 After Pseudo (w/o Content)": {
+        "prefix": "afterr",
+        "body": [
+            "&:after {",
+            "\t$0",
             "}"
         ]
     },
@@ -152,12 +200,37 @@
             "}"
         ]
     },
+    "📎 Before & After Pseudo (w/o Content)": {
+        "prefix": "before-afterr",
+        "body": [
+            "&:before,",
+            "&:after {",
+            "\t$0",
+            "}"
+        ]
+    },
     "📎 SVG Stroke & Fill Color": {
         "prefix": "svgc",
         "body": [
             "[stroke^=\"#\"] {",
             "\tstroke: currentColor;",
             "}",
+            "[fill^=\"#\"] {",
+            "\tfill: currentColor;",
+            "}"
+        ]
+    },
+    "📎 SVG Stroke Color": {
+        "prefix": "svgs",
+        "body": [
+            "[stroke^=\"#\"] {",
+            "\tstroke: currentColor;",
+            "}"
+        ]
+    },
+    "📎 SVG Fill Color": {
+        "prefix": "svgf",
+        "body": [
             "[fill^=\"#\"] {",
             "\tfill: currentColor;",
             "}"
