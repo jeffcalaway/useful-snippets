@@ -13,7 +13,7 @@
 		"ACF"
 	],
 	"icon": "icon.png",
-	"version": "1.7.0",
+	"version": "1.7.1",
 	"engines": {
 		"vscode": "^1.50.0"
 	},

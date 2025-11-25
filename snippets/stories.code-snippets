@@ -62,20 +62,40 @@
         "scope": "php",
         "body": [
             "\\$${1:${TM_SELECTED_TEXT/(.*)/${1:/downcase}/}} = \\$this->add_story('${2:${TM_SELECTED_TEXT/(.*)/${1:/capitalize}/}}', [\\$this, 'template']);",
-            "\\$${1:${TM_SELECTED_TEXT/(.*)/${1:/downcase}/}}->background = 'var(--bg--bold-color)';",
+            "\\$${1:${TM_SELECTED_TEXT/(.*)/${1:/downcase}/}}->theme = 'dark';",
             "\\$${1:${TM_SELECTED_TEXT/(.*)/${1:/downcase}/}}->args = [",
             "\t'is_inverted' => true",
             "];$0"
         ]
     },
-    "📎 Placeholder Text": {
+    "📎 Use Utilities": {
+        "prefix": "st-u",
+        "scope": "php",
+        "body": "use Useful_Stories\\Utils;$0"
+    },
+    "📎 Placeholder Text (JS)": {
         "prefix": "st-pt",
-        "scope": "php, javascript, javascriptreact, typescript, typescriptreact, jsx,jsx-attr",
+        "scope": "javascript, javascriptreact, typescript, typescriptreact, jsx,jsx-attr",
         "body": "'${1|Lorem ipsum dolor sit amet.,Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat aperiam.,Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto ullam distinctio ipsam maxime dolorum nemo non ipsa error molestias veritatis.,Lorem ipsum dolor sit amet consectetur adipisicing elit. Non cupiditate omnis reprehenderit delectus unde laboriosam veritatis fugiat quisquam dolorem ullam nobis commodi debitis porro. Maxime quia laboriosam harum est ullam.|}'$0"
     },
-    "📎 Placeholder Image": {
+    "📎 Placeholder Text (PHP)": {
+        "prefix": "st-pt",
+        "scope": "php",
+        "body": "Utils\\get_placeholder_text(${1|label,title,description,sentence,paragraph}$2)$0"
+    },
+    "📎 Placeholder Image (JS)": {
         "prefix": "st-pi",
-        "scope": "php, javascript, javascriptreact, typescript, typescriptreact, jsx,jsx-attr",
+        "scope": "javascript, javascriptreact, typescript, typescriptreact, jsx,jsx-attr",
         "body": "'https://picsum.photos/${1:Width}/${2:Height}'$0"
+    },
+    "📎 Placeholder Image (PHP)": {
+        "prefix": "st-pi",
+        "scope": "php",
+        "body": "Utils\\get_placeholder_image(${1:Width},${2:Height}$3)$0"
+    },
+    "📎 Story Theme": {
+        "prefix": "st-st",
+        "scope": "php",
+        "body": "$${1:STORY_VAR}->theme = '${2|dark, light|}$0';"
     },
 }
