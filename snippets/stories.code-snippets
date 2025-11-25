@@ -96,6 +96,6 @@
     "📎 Story Theme": {
         "prefix": "st-st",
         "scope": "php",
-        "body": "$${1:STORY_VAR}->theme = '${2|dark, light|}$0';"
+        "body": "$${1:STORY_VAR}->theme = '${2|dark,light|}$0';"
     },
 }
